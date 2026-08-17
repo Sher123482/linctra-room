@@ -1,1 +1,0 @@
-{"seq":1,"period":"2026-08","as_of":"2026-08-17T07:08:40Z","spec_sha256":"2140d80f204953ab948e6fd98ef1fb5399c408ebfdfad95f1009145affb07ad2","legs":{"ADA":{"closed_total":84,"seq_max":84,"seq_gaps":[],"latest_exit":"2026-08-12 08:00"},"BTC":{"closed_total":73,"seq_max":73,"seq_gaps":[],"latest_exit":"2026-08-16 08:00"}},"note":"狀態存證：記錄此刻公開紀錄的樣貌。不新增交易，只釘住狀態與時間。"}
