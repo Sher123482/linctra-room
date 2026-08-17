@@ -1,17 +1,31 @@
 # -*- coding: utf-8 -*-
 """
-瘥?摮?嚗? repo ?桀?????銝???嚗蕭? attestations.jsonl??
-??賢?隞暻?------------
-摰???GitHub ?撩?銝?蝣唬??啁??亦?撘Ⅳ嚗?蝣唬???TradingView ?臬嚗??隞亙?**銝??啣?鈭斗?**???芾??????嚗???隞暻潭見??
-閬??輯姥??皝?璇撌脣像??蝑???唬?蝑?????
-?箔?暻潮???------------
-摰?蝝??????冽??遘銝?閮剜敺?鈭箏 12 ??瑁?銝蝑?神??9 ??鈭斗?嚗?10 ?蝑?霅?憿舐內?嗆? closed_total ????詨? ?????嚗??亙停蝛踹鼠??摮??舀??函? GitHub ?漱??銝??璈??隞仿??鈭斗??銝?芸楛隤芯?蝞?
+每月存證：對 repo 目前的狀態蓋一個時間戳，追加到 attestations.jsonl。
+
+這支能做什麼
+------------
+它跑在 GitHub 的伺服器上，碰不到策略程式碼，也碰不到 TradingView 匯出，
+所以它不會新增交易。它只記錄「在這個時間點，公開紀錄長什麼樣」：
+規則承諾的雜湊、每條腿已平倉的筆數、最新一筆的時間。
+
+為什麼這有用
+------------
+它把紀錄的狀態釘在時間軸上。假設日後有人在 12 月偷偷補一筆日期寫成 9 月的交易，
+10 月那筆存證會顯示當時 closed_total 還是舊的數字 —— 前後矛盾，一查就穿幫。
+存證由 GitHub 產生並提交，不經過本機，所以連提交時間都不是自己說了算。
+
 append-only
 -----------
-?芾蕭??靽格?Ｘ?銵遙雿???????敺? commit ??皝?冽霈?
-?冽?
+只追加、不修改既有行。任何對舊行的改動都會讓後續 commit 的雜湊全部改變。
+
+這支刻意放在 repo 根目錄而不是 tools/：它必須公開才能在 CI 上執行，
+而 tools/ 的原則是「一律不公開」。公開的程式放公開區，界線才不會被開洞。
+
+用法
 ----
-    python attest.py            # 餈賢?銝蝑???撌脣??典?頝喲?嚗?    python attest.py --force    # 撘瑕餈賢?嚗葫閰衣嚗?"""
+    python attest.py            # 追加一筆（同月已存在則跳過）
+    python attest.py --force    # 強制追加（測試用）
+"""
 import argparse
 import json
 import pathlib
@@ -20,7 +34,8 @@ from datetime import datetime, timezone
 
 sys.dont_write_bytecode = True
 
-ROOT = pathlib.Path(__file__).parent          # ?撠望??repo ?寧??LEDGER = ROOT / "attestations.jsonl"
+ROOT = pathlib.Path(__file__).parent          # 這支就放在 repo 根目錄
+LEDGER = ROOT / "attestations.jsonl"
 
 
 def read_spec_hash():
@@ -45,12 +60,14 @@ def read_legs():
 def existing():
     if not LEDGER.exists():
         return []
-    return [json.loads(l) for l in LEDGER.read_text(encoding="utf-8").splitlines() if l.strip()]
+    return [json.loads(line) for line in
+            LEDGER.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--force", action="store_true", help="??撌脫?摮?銋璅?蕭??)
+    ap.add_argument("--force", action="store_true",
+                    help="append even if this month already has one")
     args = ap.parse_args()
 
     now = datetime.now(timezone.utc)
@@ -58,12 +75,12 @@ def main():
     period = now.strftime("%Y-%m")
 
     if not args.force and any(r.get("period") == period for r in rows):
-        print(f"{period} 撌脫?摮?嚗歲??閬撥?嗉蕭? --force嚗?)
+        print(f"{period} already attested, skipping. (use --force to append anyway)")
         return 0
 
     spec_hash = read_spec_hash()
     if not spec_hash:
-        raise SystemExit("?曆???spec.sha256 ??瘝?閬??輯姥撠望???霅??儔??)
+        raise SystemExit("spec.sha256 not found - no rule commitment, nothing to attest.")
 
     entry = {
         "seq": len(rows) + 1,
@@ -71,21 +88,20 @@ def main():
         "as_of": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "spec_sha256": spec_hash,
         "legs": read_legs(),
-        "note": "???霅?閮?甇文?祇?蝝??璅?????啣?鈭斗?嚗?????????,
+        "note": "State attestation: records how the public record looked at this moment. "
+                "Adds no trades; pins state and time.",
     }
 
     with LEDGER.open("a", encoding="utf-8", newline="\n") as fh:
         fh.write(json.dumps(entry, ensure_ascii=False, separators=(",", ":")) + "\n")
 
-    print(f"撌脰蕭?洵 {entry['seq']} 蝑?霅? ({entry['as_of']})")
-    print(f"  閬??輯姥 {spec_hash[:16]}...")
+    print(f"appended attestation #{entry['seq']}  ({entry['as_of']})")
+    print(f"  commitment {spec_hash[:16]}...")
     for leg, v in entry["legs"].items():
-        print(f"  {leg:4} 撌脣像??{v['closed_total']:3} 蝑? ???{v['latest_exit']}  "
-              f"蝻箄? {v['seq_gaps'] or '??}")
+        print(f"  {leg:4} closed {v['closed_total']:3}  latest {v['latest_exit']}  "
+              f"gaps {v['seq_gaps'] or 'none'}")
     return 0
 
 
 if __name__ == "__main__":
     sys.exit(main())
-
-
