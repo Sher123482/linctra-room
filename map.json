@@ -262,7 +262,7 @@
           },
           "where": {
             "type": "dialog",
-            "message": "https://github.com/Sher123482/linctra-room\n[wait]\n每天一次提交，就算當天沒有交易也提交。\ngit 的歷史帶時間戳而且無法回頭竄改——改掉任何一個舊紀錄，之後所有的雜湊都會變。\n[wait]\n累積得越久，它就越難造假。這是唯一會隨時間變強的證據。",
+            "message": "https://github.com/Sher123482/linctra-room\n[wait]\n那裡有一個 spec.sha256——那是策略規則的加鹽承諾，涵蓋兩條腿的完整設定與每一個參數數值。\n它不洩漏任何參數，但把規則釘死了：日後攤開原始設定，任何人重算一次就知道我們從第一天起有沒有動過手腳。\n[wait]\ngit 的歷史帶時間戳而且無法回頭竄改——改掉任何一個舊紀錄，之後所有的雜湊都會變。\n[wait]\n累積得越久，它就越難造假。這是唯一會隨時間變強的證據。",
             "emotion": "normal",
             "replies": [
               { "id": "r_1", "text": "我去看看", "actionKey": "end-dialog" }

@@ -9,3 +9,11 @@
 
 # 權益曲線圖，由 tools/make_charts.py 產生，掛在房間牆上
 !chart-*.png
+
+# 策略規則的加鹽承諾。只有雜湊值可以公開。
+!spec.sha256
+
+# spec-private.json 含 salt 與完整參數，絕不上傳。
+# 上面的 * 已經擋住它了，這裡明寫一次是為了讓意圖清楚，
+# 也防止日後有人改動白名單時誤放行。
+spec-private.json
