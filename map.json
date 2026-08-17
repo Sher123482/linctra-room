@@ -176,12 +176,29 @@
           },
           "verify": {
             "type": "dialog",
-            "message": "牆上正中間那張綠色的圖，是這間房最重要的一張。\n[wait]\n兩套策略都跑在 TradingView 上，任何人都能自己載入同一支腳本重跑一遍。\n我們把 TV 匯出的交易列表跟 Python 引擎逐筆比對——147 筆裡有 145 筆對得上，方向 100% 一致，進場價平均誤差萬分之六。\n[wait]\n所以這些數字不是我說了算，是可以被驗證的。",
+            "message": "牆上正中間那張綠色的圖，是這間房最重要的一張。\n[wait]\n同一套策略有兩個獨立實作：TradingView 的 Pine 腳本，和一支 Python 引擎。\n兩邊逐筆比對——147 筆交易對上 145 筆，方向 100% 一致，進場價平均誤差萬分之六。\n[wait]\n綠色實線是 TV，白色虛線是 Python。它們疊在一起，這就是那張圖的全部意思。",
             "emotion": "normal",
             "replies": [
-              { "id": "r_1", "text": "那成本算進去了嗎？", "next": "costs" },
-              { "id": "r_2", "text": "為什麼要兩條腿？", "next": "why-two" },
+              { "id": "r_1", "text": "但這還是你自己說的", "next": "howto" },
+              { "id": "r_2", "text": "那成本算進去了嗎？", "next": "costs" },
               { "id": "r_3", "text": "了解了", "actionKey": "end-dialog" }
+            ]
+          },
+          "howto": {
+            "type": "dialog",
+            "message": "說得對。對帳只證明實作沒寫錯，不證明策略有效。\n[wait]\n所以我們公開交易紀錄——但只公開已經平倉的部分，而且規則的雜湊值事先就釘死了。\n你可以拿每一筆去對照公開的 K 線資料自己驗算，也可以檢查我們有沒有中途偷改規則。\n[wait]\n但你拿不到還能用的訊號，因為行情早就走完了。\n[wait]\n這是刻意的：可以查證，不能複製。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "紀錄在哪裡？", "next": "where" },
+              { "id": "r_2", "text": "合理", "actionKey": "end-dialog" }
+            ]
+          },
+          "where": {
+            "type": "dialog",
+            "message": "紀錄公開在這裡：\nhttps://github.com/GITHUB-USERNAME/linctra-room\n[wait]\n每天一次提交，git 的歷史帶時間戳而且無法回頭竄改。\n累積得越久，它就越難造假。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "我去看看", "actionKey": "end-dialog" }
             ]
           },
           "costs": {
