@@ -24,13 +24,25 @@
   "objects": [
     { "id": 101, "objectKey": "office-computer-desk", "packId": "basepack", "x": 2,  "y": 3, "placementState": "placed", "placementSurface": "floor" },
     { "id": 102, "objectKey": "office-file-cabinet",  "packId": "basepack", "x": 5,  "y": 3, "placementState": "placed", "placementSurface": "floor" },
-    { "id": 103, "objectKey": "mobile-whiteboard",    "packId": "basepack", "x": 11, "y": 3, "placementState": "placed", "placementSurface": "floor" },
     { "id": 104, "objectKey": "office-file-cabinet",  "packId": "basepack", "x": 18, "y": 3, "placementState": "placed", "placementSurface": "floor" },
     { "id": 105, "objectKey": "office-computer-desk", "packId": "basepack", "x": 20, "y": 3, "placementState": "placed", "placementSurface": "floor" },
 
     { "id": 201, "objectKey": "big-safe-box",   "packId": "basepack", "x": 2,  "y": 6, "placementState": "placed", "placementSurface": "floor" },
     { "id": 202, "objectKey": "office-file-cabinet", "packId": "basepack", "x": 5, "y": 6, "placementState": "placed", "placementSurface": "floor" },
-    { "id": 203, "objectKey": "table-tv",       "packId": "basepack", "x": 11, "y": 6, "placementState": "placed", "placementSurface": "floor" },
+    {
+      "id": 203,
+      "objectKey": "hologram-display-youtube",
+      "packId": "biglazycat",
+      "x": 10, "y": 4,
+      "placementState": "placed",
+      "placementSurface": "floor",
+      "custom": {
+        "videoList": [
+          { "title": "TradingView 原始回測輸出：ADA 與 BTC", "videoId": "" }
+        ],
+        "autoplay": false
+      }
+    },
     { "id": 204, "objectKey": "brown-bookshelf","packId": "basepack", "x": 18, "y": 6, "placementState": "placed", "placementSurface": "floor" },
     { "id": 205, "objectKey": "big-safe-box",   "packId": "basepack", "x": 21, "y": 6, "placementState": "placed", "placementSurface": "floor" },
 
@@ -41,7 +53,7 @@
       "id": 504,
       "objectKey": "log-entry",
       "packId": "basepack",
-      "x": 12, "y": 5,
+      "x": 6, "y": 5,
       "placementState": "placed",
       "placementSurface": "floor",
       "custom": {
@@ -87,8 +99,6 @@
       }
     },
 
-    { "id": 601, "objectKey": "simple-treasure-box", "packId": "basepack", "x": 9,  "y": 8, "placementState": "placed", "placementSurface": "floor" },
-    { "id": 602, "objectKey": "gold-coin",           "packId": "basepack", "x": 10, "y": 8, "placementState": "placed", "placementSurface": "floor" },
 
     {
       "id": 701,
@@ -138,24 +148,8 @@
 
     { "id": 706, "objectKey": "cylinder-shaped-wall-lamp", "packId": "basepack", "x": 4,  "y": 1, "placementState": "placed", "placementSurface": "wall" },
     { "id": 707, "objectKey": "cylinder-shaped-wall-lamp", "packId": "basepack", "x": 13, "y": 1, "placementState": "placed", "placementSurface": "wall" },
-    {
-      "id": 708,
-      "objectKey": "large-customize-painting",
-      "packId": "biglazycat",
-      "x": 16, "y": 1,
-      "placementState": "placed",
-      "placementSurface": "wall",
-      "custom": { "image": "https://Sher123482.github.io/linctra-room/chart-tv-ada.png" }
-    },
-    {
-      "id": 709,
-      "objectKey": "large-customize-painting",
-      "packId": "biglazycat",
-      "x": 18, "y": 1,
-      "placementState": "placed",
-      "placementSurface": "wall",
-      "custom": { "image": "https://Sher123482.github.io/linctra-room/chart-tv-btc.png" }
-    },
+    { "id": 708, "objectKey": "cylinder-shaped-wall-lamp", "packId": "basepack", "x": 17, "y": 1, "placementState": "placed", "placementSurface": "wall" },
+    { "id": 709, "objectKey": "double-pane-window",        "packId": "basepack", "x": 18, "y": 2, "placementState": "placed", "placementSurface": "wall" },
 
     { "id": 801, "objectKey": "small-led-board", "packId": "biglazycat", "x": 3,  "y": 8, "placementState": "placed", "placementSurface": "floor", "custom": { "title": "1.55", "fontSize": "7" } },
     { "id": 802, "objectKey": "small-led-board", "packId": "biglazycat", "x": 11, "y": 8, "placementState": "placed", "placementSurface": "floor", "custom": { "title": "2.54", "fontSize": "7" } },
