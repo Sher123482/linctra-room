@@ -29,7 +29,7 @@
     { "id": 105, "objectKey": "office-computer-desk", "packId": "basepack", "x": 20, "y": 3, "placementState": "placed", "placementSurface": "floor" },
 
     { "id": 201, "objectKey": "big-safe-box",   "packId": "basepack", "x": 2,  "y": 6, "placementState": "placed", "placementSurface": "floor" },
-    { "id": 202, "objectKey": "crypto-atm",     "packId": "basepack", "x": 5,  "y": 6, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 202, "objectKey": "office-file-cabinet", "packId": "basepack", "x": 5, "y": 6, "placementState": "placed", "placementSurface": "floor" },
     { "id": 203, "objectKey": "table-tv",       "packId": "basepack", "x": 11, "y": 6, "placementState": "placed", "placementSurface": "floor" },
     { "id": 204, "objectKey": "brown-bookshelf","packId": "basepack", "x": 18, "y": 6, "placementState": "placed", "placementSurface": "floor" },
     { "id": 205, "objectKey": "big-safe-box",   "packId": "basepack", "x": 21, "y": 6, "placementState": "placed", "placementSurface": "floor" },
@@ -38,25 +38,16 @@
     { "id": 302, "objectKey": "big-leaves-indoor-plant", "packId": "basepack", "x": 22, "y": 9, "placementState": "placed", "placementSurface": "floor" },
 
     {
-      "id": 401,
-      "objectKey": "cardano-address",
+      "id": 504,
+      "objectKey": "log-entry",
       "packId": "basepack",
-      "x": 3, "y": 5,
+      "x": 12, "y": 5,
       "placementState": "placed",
       "placementSurface": "floor",
       "custom": {
-        "name": "ADA 腿",
-        "address": "",
-        "remark": "策略 A：Cardano 永續 4h 趨勢腿"
+        "name": "如何驗證",
+        "detail": "牆上四張圖的資料全部來自公開的 OKX 永續 K 線。\n策略同時存在兩個獨立實作：TradingView 的 Pine 腳本與 Python 引擎。\n兩者逐筆比對 147 筆中對上 145 筆（98.6%），方向 100% 一致，進場價平均誤差 0.0587%。\n\n資金曲線採 Python 實戰口徑，已扣除資金費與滑點；TradingView 無法模擬資金費，其顯示數字會更高。"
       }
-    },
-    {
-      "id": 402,
-      "objectKey": "wallet-okx",
-      "packId": "basepack",
-      "x": 6, "y": 5,
-      "placementState": "placed",
-      "placementSurface": "floor"
     },
 
     {
@@ -80,7 +71,7 @@
       "placementSurface": "floor",
       "custom": {
         "name": "BTC 腿 · 狀態",
-        "detail": "CAGR 117.1% ｜ 最大回撤 -25.4% ｜ Sharpe 2.14\n狀態燈號：綠\n※ 含資金費與滑點的實戰口徑"
+        "detail": "CAGR 115.6% ｜ 最大回撤 -25.4% ｜ Sharpe 2.13\n狀態燈號：綠\n※ 含資金費與滑點的實戰口徑"
       }
     },
     {
@@ -99,13 +90,60 @@
     { "id": 601, "objectKey": "simple-treasure-box", "packId": "basepack", "x": 9,  "y": 8, "placementState": "placed", "placementSurface": "floor" },
     { "id": 602, "objectKey": "gold-coin",           "packId": "basepack", "x": 10, "y": 8, "placementState": "placed", "placementSurface": "floor" },
 
-    { "id": 701, "objectKey": "large-square-wall-mount-painting",         "packId": "basepack", "x": 2,  "y": 1, "placementState": "placed", "placementSurface": "wall" },
-    { "id": 702, "objectKey": "cylinder-shaped-wall-lamp",                "packId": "basepack", "x": 6,  "y": 1, "placementState": "placed", "placementSurface": "wall" },
-    { "id": 703, "objectKey": "double-pane-window",                       "packId": "basepack", "x": 8,  "y": 2, "placementState": "placed", "placementSurface": "wall" },
-    { "id": 704, "objectKey": "medium-square-margin-wall-mount-painting", "packId": "basepack", "x": 11, "y": 1, "placementState": "placed", "placementSurface": "wall" },
-    { "id": 705, "objectKey": "double-pane-window",                       "packId": "basepack", "x": 15, "y": 2, "placementState": "placed", "placementSurface": "wall" },
-    { "id": 706, "objectKey": "cylinder-shaped-wall-lamp",                "packId": "basepack", "x": 17, "y": 1, "placementState": "placed", "placementSurface": "wall" },
-    { "id": 707, "objectKey": "large-square-wall-mount-painting",         "packId": "basepack", "x": 20, "y": 1, "placementState": "placed", "placementSurface": "wall" }
+    {
+      "id": 701,
+      "objectKey": "large-customize-painting",
+      "packId": "biglazycat",
+      "x": 2, "y": 1,
+      "placementState": "placed",
+      "placementSurface": "wall",
+      "custom": { "image": "https://GITHUB-USERNAME.github.io/linctra-room/chart-ada.png" }
+    },
+    {
+      "id": 702,
+      "objectKey": "tech-customize-sign-board",
+      "packId": "biglazycat",
+      "x": 5, "y": 1,
+      "placementState": "placed",
+      "placementSurface": "wall",
+      "custom": { "title": "TV-VERIFIED  98.6%", "fontSize": "11" }
+    },
+    {
+      "id": 703,
+      "objectKey": "large-customize-painting",
+      "packId": "biglazycat",
+      "x": 11, "y": 1,
+      "placementState": "placed",
+      "placementSurface": "wall",
+      "custom": { "image": "https://GITHUB-USERNAME.github.io/linctra-room/chart-combo.png" }
+    },
+    {
+      "id": 704,
+      "objectKey": "large-customize-painting",
+      "packId": "biglazycat",
+      "x": 14, "y": 1,
+      "placementState": "placed",
+      "placementSurface": "wall",
+      "custom": { "image": "https://GITHUB-USERNAME.github.io/linctra-room/chart-verify.png" }
+    },
+    {
+      "id": 705,
+      "objectKey": "large-customize-painting",
+      "packId": "biglazycat",
+      "x": 20, "y": 1,
+      "placementState": "placed",
+      "placementSurface": "wall",
+      "custom": { "image": "https://GITHUB-USERNAME.github.io/linctra-room/chart-btc.png" }
+    },
+
+    { "id": 706, "objectKey": "cylinder-shaped-wall-lamp", "packId": "basepack", "x": 4,  "y": 1, "placementState": "placed", "placementSurface": "wall" },
+    { "id": 707, "objectKey": "cylinder-shaped-wall-lamp", "packId": "basepack", "x": 13, "y": 1, "placementState": "placed", "placementSurface": "wall" },
+    { "id": 708, "objectKey": "cylinder-shaped-wall-lamp", "packId": "basepack", "x": 17, "y": 1, "placementState": "placed", "placementSurface": "wall" },
+    { "id": 709, "objectKey": "double-pane-window",        "packId": "basepack", "x": 18, "y": 2, "placementState": "placed", "placementSurface": "wall" },
+
+    { "id": 801, "objectKey": "small-led-board", "packId": "biglazycat", "x": 3,  "y": 8, "placementState": "placed", "placementSurface": "floor", "custom": { "title": "1.55", "fontSize": "7" } },
+    { "id": 802, "objectKey": "small-led-board", "packId": "biglazycat", "x": 11, "y": 8, "placementState": "placed", "placementSurface": "floor", "custom": { "title": "2.54", "fontSize": "7" } },
+    { "id": 803, "objectKey": "small-led-board", "packId": "biglazycat", "x": 20, "y": 8, "placementState": "placed", "placementSurface": "floor", "custom": { "title": "2.13", "fontSize": "7" } }
   ],
   "npcs": [
     {
@@ -118,7 +156,11 @@
       "facing": "down",
       "enabled": true,
       "collisionMode": "soft",
-      "behavior": { "mode": "idle" },
+      "behavior": {
+        "mode": "random-walk",
+        "randomWalkRadius": 1,
+        "walkSpeedTilesPerSecond": 2.0
+      },
       "dialog": {
         "entry": "start",
         "nodes": {
@@ -128,8 +170,26 @@
             "emotion": "normal",
             "replies": [
               { "id": "r_1", "text": "這裡是做什麼的？", "next": "about" },
-              { "id": "r_2", "text": "為什麼要兩條腿？", "next": "why-two" },
+              { "id": "r_2", "text": "這些數字可信嗎？", "next": "verify" },
               { "id": "r_3", "text": "隨便看看", "actionKey": "end-dialog" }
+            ]
+          },
+          "verify": {
+            "type": "dialog",
+            "message": "牆上正中間那張綠色的圖，是這間房最重要的一張。\n[wait]\n兩套策略都跑在 TradingView 上，任何人都能自己載入同一支腳本重跑一遍。\n我們把 TV 匯出的交易列表跟 Python 引擎逐筆比對——147 筆裡有 145 筆對得上，方向 100% 一致，進場價平均誤差萬分之六。\n[wait]\n所以這些數字不是我說了算，是可以被驗證的。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "那成本算進去了嗎？", "next": "costs" },
+              { "id": "r_2", "text": "為什麼要兩條腿？", "next": "why-two" },
+              { "id": "r_3", "text": "了解了", "actionKey": "end-dialog" }
+            ]
+          },
+          "costs": {
+            "type": "dialog",
+            "message": "TradingView 算不出永續合約的資金費。\n[wait]\n所以牆上那三條資金曲線用的是 Python 的實戰引擎，資金費和滑點都扣掉了。\n數字比 TV 版本低——TV 顯示的會更好看。\n[wait]\n我們寧可掛比較難看的那一個。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "這點我欣賞", "actionKey": "end-dialog" }
             ]
           },
           "about": {
@@ -138,7 +198,8 @@
             "emotion": "normal",
             "replies": [
               { "id": "r_1", "text": "為什麼要兩條腿？", "next": "why-two" },
-              { "id": "r_2", "text": "了解了", "actionKey": "end-dialog" }
+              { "id": "r_2", "text": "這些數字可信嗎？", "next": "verify" },
+              { "id": "r_3", "text": "了解了", "actionKey": "end-dialog" }
             ]
           },
           "why-two": {
@@ -163,7 +224,11 @@
       "facing": "down",
       "enabled": true,
       "collisionMode": "soft",
-      "behavior": { "mode": "idle" },
+      "behavior": {
+        "mode": "random-walk",
+        "randomWalkRadius": 2,
+        "walkSpeedTilesPerSecond": 2.2
+      },
       "dialog": {
         "entry": "start",
         "nodes": {
@@ -208,7 +273,11 @@
       "facing": "down",
       "enabled": true,
       "collisionMode": "soft",
-      "behavior": { "mode": "idle" },
+      "behavior": {
+        "mode": "random-walk",
+        "randomWalkRadius": 2,
+        "walkSpeedTilesPerSecond": 2.8
+      },
       "dialog": {
         "entry": "start",
         "nodes": {
@@ -224,7 +293,7 @@
           },
           "stats": {
             "type": "dialog",
-            "message": "含資金費與滑點：\nCAGR 117.1%、最大回撤 -25.4%、Sharpe 2.14。\n狀態燈號目前全綠。",
+            "message": "含資金費與滑點：\nCAGR 115.6%、最大回撤 -25.4%、Sharpe 2.13。\n狀態燈號目前全綠。",
             "emotion": "happy",
             "replies": [
               { "id": "r_1", "text": "為什麼不能全押你？", "next": "why-not" },
