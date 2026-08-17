@@ -1,0 +1,38 @@
+name: Monthly attestation
+
+# 每月 1 號自動對公開紀錄的狀態蓋一個時間戳。
+# 跑在 GitHub 的伺服器上 —— 本機關機、出國、幾個月沒空理它，時間戳的連續性都不會斷。
+on:
+  schedule:
+    - cron: '0 0 1 * *'      # 每月 1 號 00:00 UTC
+  workflow_dispatch:          # 也可以在 Actions 頁面手動觸發
+
+permissions:
+  contents: write             # 只要能提交回本 repo，不需要任何額外機密
+
+jobs:
+  attest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # attest.py 只用標準函式庫，不需要安裝任何套件，
+      # 也碰不到策略程式碼 —— 它只讀 repo 裡已經公開的檔案。
+      - name: Append attestation
+        run: python attest.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- attestations.jsonl; then
+            echo "本月已有存證，無變更。"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add attestations.jsonl
+          git commit -m "Attest record state for $(date -u +%Y-%m)"
+          git push
