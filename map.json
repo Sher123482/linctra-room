@@ -270,10 +270,19 @@
           },
           "whytv": {
             "type": "dialog",
-            "message": "因為牆上其他幾張是我們自己畫的——理論上想畫成什麼樣都可以。\n[wait]\nTradingView 那兩張是它自己渲染的，連帳號浮水印都留著。多一層第三方的份量，偽造成本高得多。\n[wait]\n未經處理的原圖也一起公開在 repo 裡，檔名 tv-original-。你可以自己比對，確認我們只加了標題，沒動截圖本體。\n[wait]\n順帶一提，ADA 那張最值得看的不是 +727%——是同期間買入持有 -56.61%。標的自己跌掉一半，策略還是賺的。",
-            "emotion": "happy",
+            "message": "因為牆上其他幾張是我們自己畫的——理論上想畫成什麼樣都可以。\nTradingView 那兩張是它自己渲染的，多一層第三方的份量，偽造成本高得多。\n[wait]\n但我要講清楚：牆上這兩張是裁切過的。畫框在遊戲裡只有一百多像素，不裁切的話那些線和字全是糊的。\n[wait]\n未經裁切的原圖完整公開在 repo 裡，檔名 tv-original-ada.png 和 tv-original-btc.png，TradingView 浮水印和帳號都在。\n你可以自己下載比對，確認裁切沒有動到數字。",
+            "emotion": "determined",
             "replies": [
-              { "id": "r_1", "text": "這個確實不好造假", "actionKey": "end-dialog" }
+              { "id": "r_1", "text": "ADA 那張怎麼看？", "next": "adahold" },
+              { "id": "r_2", "text": "這個確實不好造假", "actionKey": "end-dialog" }
+            ]
+          },
+          "adahold": {
+            "type": "dialog",
+            "message": "問對了。ADA 那張最值得看的不是 +727.74%。\n[wait]\n是下面那個數字：同期間買入持有 -56.61%。\n[wait]\n標的自己跌掉一半以上，策略還是賺了七倍。\n[wait]\nBTC 那張沒有這個效果——同期間買入持有是 +216%，你大可以說我們只是搭上了行情。ADA 這張堵死了那條路。",
+            "emotion": "determined",
+            "replies": [
+              { "id": "r_1", "text": "這點無法反駁", "actionKey": "end-dialog" }
             ]
           },
           "rebalance": {
