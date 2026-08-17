@@ -299,7 +299,7 @@
           "selfreport": {
             "type": "dialog",
             "message": "說得對，而且這是最該問的一題。\n[wait]\n對帳只證明「實作沒寫錯」，不證明「策略有效」。回測、對帳，全部都是我們自己報的。\n[wait]\n真正無法造假的只有一種東西：事前公開、時間戳記鎖死、事後對得上的紀錄。",
-            "emotion": "normal",
+            "emotion": "thinking",
             "replies": [
               { "id": "r_1", "text": "那你們怎麼做？", "next": "howto" },
               { "id": "r_2", "text": "怎麼知道不是過度最佳化？", "next": "overfit" }
@@ -308,7 +308,7 @@
           "howto": {
             "type": "dialog",
             "message": "交易紀錄公開，但只公開**已經平倉**的部分，而且策略規則的雜湊值事先就釘死了。\n[wait]\n你可以拿每一筆去對照公開的 K 線自己驗算，也可以檢查我們有沒有中途偷改規則——雜湊對不上就露餡。\n[wait]\n但你拿不到還能用的訊號，因為行情早就走完了。\n[wait]\n這是刻意設計的：可以查證，不能複製。",
-            "emotion": "normal",
+            "emotion": "determined",
             "replies": [
               { "id": "r_1", "text": "紀錄在哪裡？", "next": "where" },
               { "id": "r_2", "text": "為什麼不直接公開腳本？", "next": "whynot" }
@@ -364,7 +364,7 @@
     {
       "id": "npc-ada-leg",
       "name": { "family": "ADA", "given": "腿" },
-      "actorKey": "blue-wizard-girl",
+      "actorKey": "white-hair-knight",
       "packId": "basepack",
       "x": 4,
       "y": 6,
@@ -382,7 +382,7 @@
           "start": {
             "type": "dialog",
             "message": "我是 ADA 腿，跑在 Cardano 永續的 4 小時線上。\n[wait]\n最近不太好過——今年在虧。",
-            "emotion": "normal",
+            "emotion": "sad",
             "replies": [
               { "id": "r_1", "text": "績效如何？", "next": "stats" },
               { "id": "r_2", "text": "那還留著你做什麼？", "next": "why-keep" },
@@ -392,7 +392,7 @@
           "stats": {
             "type": "dialog",
             "message": "含資金費與滑點的實戰口徑：\nCAGR 94.0%、最大回撤 -32.5%、Sharpe 1.55。\n[wait]\n但停用規則已經亮黃燈了：連續虧損筆數達到歷史極值，未創新高的天數也逼近警戒線。",
-            "emotion": "moved",
+            "emotion": "sad",
             "replies": [
               { "id": "r_1", "text": "那還留著你做什麼？", "next": "why-keep" },
               { "id": "r_2", "text": "辛苦了", "actionKey": "end-dialog" }
@@ -401,7 +401,7 @@
           "why-keep": {
             "type": "dialog",
             "message": "因為我跟隔壁那位不相關。\n[wait]\n去年他只賺 7.6% 的時候，我賺了 49.2%。\n今年換我在虧、他在賺。\n[wait]\n組合要的不是兩個都強，是兩個不會同時倒。",
-            "emotion": "happy",
+            "emotion": "determined",
             "replies": [
               { "id": "r_1", "text": "懂了", "actionKey": "end-dialog" }
             ]
@@ -413,7 +413,7 @@
     {
       "id": "npc-btc-leg",
       "name": { "family": "BTC", "given": "腿" },
-      "actorKey": "white-hair-knight",
+      "actorKey": "villager-man-2",
       "packId": "basepack",
       "x": 19,
       "y": 6,
