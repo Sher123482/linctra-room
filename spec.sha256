@@ -1,0 +1,13 @@
+2140d80f204953ab948e6fd98ef1fb5399c408ebfdfad95f1009145affb07ad2
+
+# 策略規則承諾 (salted SHA-256 commitment)
+# committed_at: 2026-08-17T06:42:23Z
+#
+# 公開揭露：三刀流均線策略，黃金/死亡交叉進場。其餘規則與全部參數未公開。
+#
+# 上面那串雜湊涵蓋了兩條腿的完整設定（含所有參數數值）與一段隨機鹽值。
+# 它不洩漏任何參數，但鎖死了規則：日後公開 salt 與設定即可驗證
+# 「這確實是 2026-08-17 當天承諾的那一套」。
+#
+# 驗證方式（日後揭露時）：
+#   sha256( json.dumps(spec, sort_keys=True, separators=(',',':'), ensure_ascii=False) )
