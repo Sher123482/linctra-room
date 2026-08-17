@@ -176,37 +176,11 @@
           },
           "verify": {
             "type": "dialog",
-            "message": "牆上正中間那張綠色的圖，是這間房最重要的一張。\n[wait]\n同一套策略有兩個獨立實作：TradingView 的 Pine 腳本，和一支 Python 引擎。\n兩邊逐筆比對——147 筆交易對上 145 筆，方向 100% 一致，進場價平均誤差萬分之六。\n[wait]\n綠色實線是 TV，白色虛線是 Python。它們疊在一起，這就是那張圖的全部意思。",
+            "message": "那件事不歸我管，我只負責帶路。\n[wait]\n你看到房間正中間那張綠色的圖了嗎？站在它下面那位是審計員。\n[wait]\n你想問的每一個難聽的問題，都去問他。他就是為了被問而站在那裡的。",
             "emotion": "normal",
             "replies": [
-              { "id": "r_1", "text": "但這還是你自己說的", "next": "howto" },
-              { "id": "r_2", "text": "那成本算進去了嗎？", "next": "costs" },
-              { "id": "r_3", "text": "了解了", "actionKey": "end-dialog" }
-            ]
-          },
-          "howto": {
-            "type": "dialog",
-            "message": "說得對。對帳只證明實作沒寫錯，不證明策略有效。\n[wait]\n所以我們公開交易紀錄——但只公開已經平倉的部分，而且規則的雜湊值事先就釘死了。\n你可以拿每一筆去對照公開的 K 線資料自己驗算，也可以檢查我們有沒有中途偷改規則。\n[wait]\n但你拿不到還能用的訊號，因為行情早就走完了。\n[wait]\n這是刻意的：可以查證，不能複製。",
-            "emotion": "normal",
-            "replies": [
-              { "id": "r_1", "text": "紀錄在哪裡？", "next": "where" },
-              { "id": "r_2", "text": "合理", "actionKey": "end-dialog" }
-            ]
-          },
-          "where": {
-            "type": "dialog",
-            "message": "紀錄公開在這裡：\nhttps://github.com/GITHUB-USERNAME/linctra-room\n[wait]\n每天一次提交，git 的歷史帶時間戳而且無法回頭竄改。\n累積得越久，它就越難造假。",
-            "emotion": "normal",
-            "replies": [
-              { "id": "r_1", "text": "我去看看", "actionKey": "end-dialog" }
-            ]
-          },
-          "costs": {
-            "type": "dialog",
-            "message": "TradingView 算不出永續合約的資金費。\n[wait]\n所以牆上那三條資金曲線用的是 Python 的實戰引擎，資金費和滑點都扣掉了。\n數字比 TV 版本低——TV 顯示的會更好看。\n[wait]\n我們寧可掛比較難看的那一個。",
-            "emotion": "normal",
-            "replies": [
-              { "id": "r_1", "text": "這點我欣賞", "actionKey": "end-dialog" }
+              { "id": "r_1", "text": "為什麼要兩條腿？", "next": "why-two" },
+              { "id": "r_2", "text": "好，我去找他", "actionKey": "end-dialog" }
             ]
           },
           "about": {
@@ -225,6 +199,99 @@
             "emotion": "happy",
             "replies": [
               { "id": "r_1", "text": "有意思", "actionKey": "end-dialog" }
+            ]
+          }
+        }
+      },
+      "inventory": []
+    },
+    {
+      "id": "npc-auditor",
+      "name": { "family": "審計", "given": "員" },
+      "actorKey": "white-hair-old-man",
+      "packId": "basepack",
+      "x": 15,
+      "y": 6,
+      "facing": "down",
+      "enabled": true,
+      "collisionMode": "soft",
+      "behavior": {
+        "mode": "random-walk",
+        "randomWalkRadius": 1,
+        "walkSpeedTilesPerSecond": 1.6
+      },
+      "dialog": {
+        "entry": "start",
+        "nodes": {
+          "start": {
+            "type": "dialog",
+            "message": "我站在這張圖底下，工作就是回答難聽的問題。\n[wait]\n上面那張圖：綠色實線是 TradingView，白色虛線是 Python。\n同一套策略，兩個獨立實作，147 筆交易對上 145 筆，方向 100% 一致，進場價平均誤差萬分之六。\n[wait]\n你想先問哪一個？",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "這還不是你自己說的？", "next": "selfreport" },
+              { "id": "r_2", "text": "成本算進去了嗎？", "next": "costs" },
+              { "id": "r_3", "text": "怎麼知道不是過度最佳化？", "next": "overfit" }
+            ]
+          },
+          "selfreport": {
+            "type": "dialog",
+            "message": "說得對，而且這是最該問的一題。\n[wait]\n對帳只證明「實作沒寫錯」，不證明「策略有效」。回測、對帳，全部都是我們自己報的。\n[wait]\n真正無法造假的只有一種東西：事前公開、時間戳記鎖死、事後對得上的紀錄。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "那你們怎麼做？", "next": "howto" },
+              { "id": "r_2", "text": "怎麼知道不是過度最佳化？", "next": "overfit" }
+            ]
+          },
+          "howto": {
+            "type": "dialog",
+            "message": "交易紀錄公開，但只公開**已經平倉**的部分，而且策略規則的雜湊值事先就釘死了。\n[wait]\n你可以拿每一筆去對照公開的 K 線自己驗算，也可以檢查我們有沒有中途偷改規則——雜湊對不上就露餡。\n[wait]\n但你拿不到還能用的訊號，因為行情早就走完了。\n[wait]\n這是刻意設計的：可以查證，不能複製。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "紀錄在哪裡？", "next": "where" },
+              { "id": "r_2", "text": "為什麼不直接公開腳本？", "next": "whynot" }
+            ]
+          },
+          "whynot": {
+            "type": "dialog",
+            "message": "因為在 TradingView 上，「能驗證」和「能使用」是同一個能力。\n[wait]\n就算隱藏原始碼，任何人把腳本加到圖表上，就會即時看到進出場箭頭——他讀不到規則，卻可以照著訊號交易。\n[wait]\n那不叫驗證，那叫送。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "紀錄在哪裡？", "next": "where" },
+              { "id": "r_2", "text": "懂了", "actionKey": "end-dialog" }
+            ]
+          },
+          "where": {
+            "type": "dialog",
+            "message": "https://github.com/GITHUB-USERNAME/linctra-room\n[wait]\n每天一次提交，就算當天沒有交易也提交。\ngit 的歷史帶時間戳而且無法回頭竄改——改掉任何一個舊紀錄，之後所有的雜湊都會變。\n[wait]\n累積得越久，它就越難造假。這是唯一會隨時間變強的證據。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "我去看看", "actionKey": "end-dialog" }
+            ]
+          },
+          "costs": {
+            "type": "dialog",
+            "message": "TradingView 算不出永續合約的資金費。\n[wait]\n所以牆上那三條資金曲線用的是 Python 實戰引擎，資金費和滑點都扣掉了。數字比 TV 版本低——TV 顯示的會更好看。\n[wait]\n我們寧可掛比較難看的那一個。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "這點我欣賞", "next": "gap" },
+              { "id": "r_2", "text": "怎麼知道不是過度最佳化？", "next": "overfit" }
+            ]
+          },
+          "overfit": {
+            "type": "dialog",
+            "message": "參數是在樣本內選的，然後拿到沒看過的資料上驗證，滾動重複這個過程。\n[wait]\n但我要先說清楚：這一樣是我們自己報的。\n[wait]\n真的想確認，就去看那份持續累積的訊號紀錄。它不需要你相信任何人。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "紀錄在哪裡？", "next": "where" },
+              { "id": "r_2", "text": "這還不是你自己說的？", "next": "selfreport" }
+            ]
+          },
+          "gap": {
+            "type": "dialog",
+            "message": "還有一件我們還沒做到的事，我一併說了。\n[wait]\n實際成交價和回測假設價之間的落差，我們還沒有量測。\nBTC 那條腿對成本特別敏感，所以這個數字很重要——而它目前是空白的。\n[wait]\n我寧可你從我這裡聽到，也不要你自己發現。",
+            "emotion": "moved",
+            "replies": [
+              { "id": "r_1", "text": "這樣講反而可信", "actionKey": "end-dialog" }
             ]
           }
         }
