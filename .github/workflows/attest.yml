@@ -27,12 +27,15 @@ jobs:
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- attestations.jsonl; then
-            echo "本月已有存證，無變更。"
+          # 先 add 再比 --cached：attestations.jsonl 第一次是「未追蹤的新檔案」，
+          # 而 git diff 只看已追蹤的檔案 —— 直接用 git diff --quiet 會誤判成無變更，
+          # 工作流程照樣回報成功，但什麼都沒提交。（實測踩過。）
+          git add attestations.jsonl
+          if git diff --cached --quiet; then
+            echo "No change this month; nothing to commit."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add attestations.jsonl
           git commit -m "Attest record state for $(date -u +%Y-%m)"
           git push
