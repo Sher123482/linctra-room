@@ -6,3 +6,6 @@
 !README.md
 !map.json
 !logo.webp
+
+# 權益曲線圖，由 tools/make_charts.py 產生，掛在房間牆上
+!chart-*.png
