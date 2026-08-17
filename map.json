@@ -225,12 +225,39 @@
         "nodes": {
           "start": {
             "type": "dialog",
-            "message": "我站在這張圖底下，工作就是回答難聽的問題。\n[wait]\n上面那張圖：綠色實線是 TradingView，白色虛線是 Python。\n同一套策略，兩個獨立實作，147 筆交易對上 145 筆，方向 100% 一致，進場價平均誤差萬分之六。\n[wait]\n你想先問哪一個？",
+            "message": "我站在這張圖底下，工作就是回答難聽的問題。\n[wait]\n上面那張圖：綠色實線是 TradingView，白色虛線是 Python。\n同一套策略，兩個獨立實作，147 筆交易對上 145 筆，方向 100% 一致，進場價平均誤差萬分之六。\n[wait]\n完整的績效數字我可以直接報給你，其他難聽的問題也歡迎。",
             "emotion": "normal",
             "replies": [
-              { "id": "r_1", "text": "這還不是你自己說的？", "next": "selfreport" },
-              { "id": "r_2", "text": "成本算進去了嗎？", "next": "costs" },
+              { "id": "r_1", "text": "給我看完整績效表", "next": "table" },
+              { "id": "r_2", "text": "這還不是你自己說的？", "next": "selfreport" },
               { "id": "r_3", "text": "怎麼知道不是過度最佳化？", "next": "overfit" }
+            ]
+          },
+          "table": {
+            "type": "dialog",
+            "message": "含資金費與滑點的實戰口徑，2020 至今：\n[wait]\nADA 腿　　CAGR 94.0%　回撤 -32.5%　Sharpe 1.55　報酬回撤比 2.89\nBTC 腿　　CAGR 115.6%　回撤 -25.4%　Sharpe 2.13　報酬回撤比 4.55\n組合　　　CAGR 121.1%　回撤 -23.0%　Sharpe 2.54　報酬回撤比 5.26\n[wait]\n組合是 ADA 30% / BTC 70%，每月再平衡。\n兩腿日頻相關係數 0.10。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "組合怎麼會比兩條腿都高？", "next": "rebalance" },
+              { "id": "r_2", "text": "成本算進去了嗎？", "next": "costs" },
+              { "id": "r_3", "text": "這還不是你自己說的？", "next": "selfreport" }
+            ]
+          },
+          "rebalance": {
+            "type": "dialog",
+            "message": "問得好，那通常是造假的徵兆——組合報酬照理會落在兩腿之間。\n[wait]\n這裡沒有。原因是再平衡溢酬：兩條腿相關係數只有 0.10，波動又都很高。\n一條腿漲多了就減碼、另一條跌了就加碼，每月做一次，長期會多擠出報酬。\n[wait]\n代價是要夠頻繁。同樣的權重改成每年再平衡只剩 112.4%，完全不再平衡 111.5%。\n頻率才是關鍵，不是權重。\n[wait]\n順帶一提，全押 BTC 是 115.6%——所以不再平衡的組合其實輸給單押。低相關要有人去收，才收得到。",
+            "emotion": "happy",
+            "replies": [
+              { "id": "r_1", "text": "那為什麼不全押 BTC？", "next": "whynotbtc" },
+              { "id": "r_2", "text": "了解", "actionKey": "end-dialog" }
+            ]
+          },
+          "whynotbtc": {
+            "type": "dialog",
+            "message": "壓力測試做過了。\n[wait]\n如果 BTC 那條腿的邊緣消失、甚至反轉，全押它的帳戶會直接死掉——回撤超過八成。\n留三成給 ADA，正常年份幾乎不損失報酬，崩壞時卻能活下來。\n[wait]\n那三成不是成本，是保費。而且這份保費是負的。",
+            "emotion": "moved",
+            "replies": [
+              { "id": "r_1", "text": "有道理", "actionKey": "end-dialog" }
             ]
           },
           "selfreport": {
