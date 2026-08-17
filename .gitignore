@@ -7,11 +7,15 @@
 !map.json
 !logo.webp
 
-# 權益曲線圖，由 tools/make_charts.py 產生，掛在房間牆上
+# 權益曲線圖，掛在房間牆上（由本機工具產生）
 !chart-*.png
 
 # 策略規則的加鹽承諾。只有雜湊值可以公開。
 !spec.sha256
+
+# 已平倉交易紀錄。目錄要先放行，git 才會進去看裡面的檔案。
+!signals/
+!signals/*.json
 
 # spec-private.json 含 salt 與完整參數，絕不上傳。
 # 上面的 * 已經擋住它了，這裡明寫一次是為了讓意圖清楚，
