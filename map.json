@@ -159,7 +159,7 @@
     {
       "id": "npc-greeter",
       "name": { "family": "櫃檯", "given": "接待" },
-      "actorKey": "jk-girl",
+      "actorKey": "twintails-elf-girl",
       "packId": "basepack",
       "x": 12,
       "y": 9,
@@ -371,7 +371,7 @@
     {
       "id": "npc-ada-leg",
       "name": { "family": "ADA", "given": "腿" },
-      "actorKey": "white-hair-knight",
+      "actorKey": "jk-girl",
       "packId": "basepack",
       "x": 4,
       "y": 6,
