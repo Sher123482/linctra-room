@@ -1,0 +1,8 @@
+# 白名單式忽略：預設忽略所有東西，只放行房間發佈需要的檔案。
+# 目的是結構性防止策略程式碼、參數、金鑰被誤commit進這個「公開」repo。
+*
+
+!.gitignore
+!README.md
+!map.json
+!logo.webp

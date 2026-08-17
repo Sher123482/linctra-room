@@ -1,0 +1,252 @@
+{
+  "schemaVersion": "1.0",
+  "mapType": "room",
+  "app": "linctra.room.editor",
+  "exportedAt": "2026-08-17T00:00:00.000Z",
+  "room": {
+    "width": 24,
+    "depth": 10,
+    "height": 2,
+    "tileSize": 32,
+    "spawn": [[11, 10], [12, 10]],
+    "exit": [[11, 11], [12, 11]]
+  },
+  "background": {
+    "floor": {
+      "backgroundKey": "blue-gray-granite-tile",
+      "packId": "basepack"
+    },
+    "wall": {
+      "backgroundKey": "light-gray-panel-wall",
+      "packId": "basepack"
+    }
+  },
+  "objects": [
+    { "id": 101, "objectKey": "office-computer-desk", "packId": "basepack", "x": 2,  "y": 3, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 102, "objectKey": "office-file-cabinet",  "packId": "basepack", "x": 5,  "y": 3, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 103, "objectKey": "mobile-whiteboard",    "packId": "basepack", "x": 11, "y": 3, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 104, "objectKey": "office-file-cabinet",  "packId": "basepack", "x": 18, "y": 3, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 105, "objectKey": "office-computer-desk", "packId": "basepack", "x": 20, "y": 3, "placementState": "placed", "placementSurface": "floor" },
+
+    { "id": 201, "objectKey": "big-safe-box",   "packId": "basepack", "x": 2,  "y": 6, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 202, "objectKey": "crypto-atm",     "packId": "basepack", "x": 5,  "y": 6, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 203, "objectKey": "table-tv",       "packId": "basepack", "x": 11, "y": 6, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 204, "objectKey": "brown-bookshelf","packId": "basepack", "x": 18, "y": 6, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 205, "objectKey": "big-safe-box",   "packId": "basepack", "x": 21, "y": 6, "placementState": "placed", "placementSurface": "floor" },
+
+    { "id": 301, "objectKey": "big-leaves-indoor-plant", "packId": "basepack", "x": 1,  "y": 9, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 302, "objectKey": "big-leaves-indoor-plant", "packId": "basepack", "x": 22, "y": 9, "placementState": "placed", "placementSurface": "floor" },
+
+    {
+      "id": 401,
+      "objectKey": "cardano-address",
+      "packId": "basepack",
+      "x": 3, "y": 5,
+      "placementState": "placed",
+      "placementSurface": "floor",
+      "custom": {
+        "name": "ADA 腿",
+        "address": "",
+        "remark": "策略 A：Cardano 永續 4h 趨勢腿"
+      }
+    },
+    {
+      "id": 402,
+      "objectKey": "wallet-okx",
+      "packId": "basepack",
+      "x": 6, "y": 5,
+      "placementState": "placed",
+      "placementSurface": "floor"
+    },
+
+    {
+      "id": 501,
+      "objectKey": "log-entry",
+      "packId": "basepack",
+      "x": 8, "y": 5,
+      "placementState": "placed",
+      "placementSurface": "floor",
+      "custom": {
+        "name": "ADA 腿 · 狀態",
+        "detail": "CAGR 94.0% ｜ 最大回撤 -32.5% ｜ Sharpe 1.55\n狀態燈號：黃（連續虧損達歷史極值、未創新高天數逼近警戒）\n※ 含資金費與滑點的實戰口徑"
+      }
+    },
+    {
+      "id": 502,
+      "objectKey": "log-entry",
+      "packId": "basepack",
+      "x": 15, "y": 5,
+      "placementState": "placed",
+      "placementSurface": "floor",
+      "custom": {
+        "name": "BTC 腿 · 狀態",
+        "detail": "CAGR 117.1% ｜ 最大回撤 -25.4% ｜ Sharpe 2.14\n狀態燈號：綠\n※ 含資金費與滑點的實戰口徑"
+      }
+    },
+    {
+      "id": 503,
+      "objectKey": "log-entry",
+      "packId": "basepack",
+      "x": 13, "y": 8,
+      "placementState": "placed",
+      "placementSurface": "floor",
+      "custom": {
+        "name": "組合 · 狀態",
+        "detail": "配置 ADA 30% / BTC 70%，每月再平衡\nCAGR 121.1% ｜ 最大回撤 -23.0% ｜ Sharpe 2.54\n兩腿日頻相關係數 0.10"
+      }
+    },
+
+    { "id": 601, "objectKey": "simple-treasure-box", "packId": "basepack", "x": 9,  "y": 8, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 602, "objectKey": "gold-coin",           "packId": "basepack", "x": 10, "y": 8, "placementState": "placed", "placementSurface": "floor" },
+
+    { "id": 701, "objectKey": "large-square-wall-mount-painting",         "packId": "basepack", "x": 2,  "y": 1, "placementState": "placed", "placementSurface": "wall" },
+    { "id": 702, "objectKey": "cylinder-shaped-wall-lamp",                "packId": "basepack", "x": 6,  "y": 1, "placementState": "placed", "placementSurface": "wall" },
+    { "id": 703, "objectKey": "double-pane-window",                       "packId": "basepack", "x": 8,  "y": 2, "placementState": "placed", "placementSurface": "wall" },
+    { "id": 704, "objectKey": "medium-square-margin-wall-mount-painting", "packId": "basepack", "x": 11, "y": 1, "placementState": "placed", "placementSurface": "wall" },
+    { "id": 705, "objectKey": "double-pane-window",                       "packId": "basepack", "x": 15, "y": 2, "placementState": "placed", "placementSurface": "wall" },
+    { "id": 706, "objectKey": "cylinder-shaped-wall-lamp",                "packId": "basepack", "x": 17, "y": 1, "placementState": "placed", "placementSurface": "wall" },
+    { "id": 707, "objectKey": "large-square-wall-mount-painting",         "packId": "basepack", "x": 20, "y": 1, "placementState": "placed", "placementSurface": "wall" }
+  ],
+  "npcs": [
+    {
+      "id": "npc-greeter",
+      "name": { "family": "櫃檯", "given": "接待" },
+      "actorKey": "jk-girl",
+      "packId": "basepack",
+      "x": 12,
+      "y": 9,
+      "facing": "down",
+      "enabled": true,
+      "collisionMode": "soft",
+      "behavior": { "mode": "idle" },
+      "dialog": {
+        "entry": "start",
+        "nodes": {
+          "start": {
+            "type": "dialog",
+            "message": "歡迎光臨雙腿交易室。\n[wait]\n這裡展示的是一組實盤運行中的量化策略組合。\n左邊是 ADA 腿，右邊是 BTC 腿，中間是組合結果。\n你想先看哪一邊？",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "這裡是做什麼的？", "next": "about" },
+              { "id": "r_2", "text": "為什麼要兩條腿？", "next": "why-two" },
+              { "id": "r_3", "text": "隨便看看", "actionKey": "end-dialog" }
+            ]
+          },
+          "about": {
+            "type": "dialog",
+            "message": "這是一間策略研究室。\n[wait]\n牆上的三幅圖分別是 ADA 腿、組合、BTC 腿的資金曲線。\n地上的日誌物件會顯示各自的最新績效。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "為什麼要兩條腿？", "next": "why-two" },
+              { "id": "r_2", "text": "了解了", "actionKey": "end-dialog" }
+            ]
+          },
+          "why-two": {
+            "type": "dialog",
+            "message": "因為兩條腿幾乎不相關，日頻相關係數只有 0.10。\n[wait]\n低相關加上夠頻繁的再平衡，組合的報酬會高於任何單獨一條腿。\n這不是錯覺，是再平衡溢酬。",
+            "emotion": "happy",
+            "replies": [
+              { "id": "r_1", "text": "有意思", "actionKey": "end-dialog" }
+            ]
+          }
+        }
+      },
+      "inventory": []
+    },
+    {
+      "id": "npc-ada-leg",
+      "name": { "family": "ADA", "given": "腿" },
+      "actorKey": "blue-wizard-girl",
+      "packId": "basepack",
+      "x": 4,
+      "y": 6,
+      "facing": "down",
+      "enabled": true,
+      "collisionMode": "soft",
+      "behavior": { "mode": "idle" },
+      "dialog": {
+        "entry": "start",
+        "nodes": {
+          "start": {
+            "type": "dialog",
+            "message": "我是 ADA 腿，跑在 Cardano 永續的 4 小時線上。\n[wait]\n最近不太好過——今年在虧。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "績效如何？", "next": "stats" },
+              { "id": "r_2", "text": "那還留著你做什麼？", "next": "why-keep" },
+              { "id": "r_3", "text": "保重", "actionKey": "end-dialog" }
+            ]
+          },
+          "stats": {
+            "type": "dialog",
+            "message": "含資金費與滑點的實戰口徑：\nCAGR 94.0%、最大回撤 -32.5%、Sharpe 1.55。\n[wait]\n但停用規則已經亮黃燈了：連續虧損筆數達到歷史極值，未創新高的天數也逼近警戒線。",
+            "emotion": "moved",
+            "replies": [
+              { "id": "r_1", "text": "那還留著你做什麼？", "next": "why-keep" },
+              { "id": "r_2", "text": "辛苦了", "actionKey": "end-dialog" }
+            ]
+          },
+          "why-keep": {
+            "type": "dialog",
+            "message": "因為我跟隔壁那位不相關。\n[wait]\n去年他只賺 7.6% 的時候，我賺了 49.2%。\n今年換我在虧、他在賺。\n[wait]\n組合要的不是兩個都強，是兩個不會同時倒。",
+            "emotion": "happy",
+            "replies": [
+              { "id": "r_1", "text": "懂了", "actionKey": "end-dialog" }
+            ]
+          }
+        }
+      },
+      "inventory": []
+    },
+    {
+      "id": "npc-btc-leg",
+      "name": { "family": "BTC", "given": "腿" },
+      "actorKey": "white-hair-knight",
+      "packId": "basepack",
+      "x": 19,
+      "y": 6,
+      "facing": "down",
+      "enabled": true,
+      "collisionMode": "soft",
+      "behavior": { "mode": "idle" },
+      "dialog": {
+        "entry": "start",
+        "nodes": {
+          "start": {
+            "type": "dialog",
+            "message": "BTC 腿。同一套引擎，不同參數。\n[wait]\n今年狀況不錯，但我不建議你只押我一個。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "績效如何？", "next": "stats" },
+              { "id": "r_2", "text": "為什麼不能全押你？", "next": "why-not" },
+              { "id": "r_3", "text": "了解", "actionKey": "end-dialog" }
+            ]
+          },
+          "stats": {
+            "type": "dialog",
+            "message": "含資金費與滑點：\nCAGR 117.1%、最大回撤 -25.4%、Sharpe 2.14。\n狀態燈號目前全綠。",
+            "emotion": "happy",
+            "replies": [
+              { "id": "r_1", "text": "為什麼不能全押你？", "next": "why-not" },
+              { "id": "r_2", "text": "了解", "actionKey": "end-dialog" }
+            ]
+          },
+          "why-not": {
+            "type": "dialog",
+            "message": "壓力測試做過了。\n[wait]\n如果我的邊緣消失、甚至反轉，全押我的帳戶會直接死掉。\n留三成給隔壁那位，正常年份幾乎不損失報酬，崩壞時卻能活下來。\n[wait]\n那三成不是成本，是保費——而且保費是負的。",
+            "emotion": "moved",
+            "replies": [
+              { "id": "r_1", "text": "有道理", "actionKey": "end-dialog" }
+            ]
+          }
+        }
+      },
+      "inventory": []
+    }
+  ],
+  "roomRuntime": {
+    "version": 1,
+    "updatedAt": "2026-08-17T00:00:00.000Z",
+    "objects": []
+  }
+}
