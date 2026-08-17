@@ -38,7 +38,7 @@
       "placementSurface": "floor",
       "custom": {
         "videoList": [
-          { "title": "TradingView 原始回測輸出：ADA 與 BTC", "videoId": "" }
+          { "title": "TradingView 原始回測輸出：ADA 與 BTC", "videoId": "R-cYcWbx0Os" }
         ],
         "autoplay": false
       }
@@ -195,7 +195,7 @@
           },
           "about": {
             "type": "dialog",
-            "message": "這是一間策略研究室。\n[wait]\n牆上的三幅圖分別是 ADA 腿、組合、BTC 腿的資金曲線。\n地上的日誌物件會顯示各自的最新績效。",
+            "message": "這是一間策略研究室。\n[wait]\n牆上的圖分別是 ADA 腿、組合、BTC 腿的資金曲線，中間那張綠色的是對帳結果。\n[wait]\n房間正中央那台全息投影台可以互動——點下去能全螢幕播放 TradingView 的原始回測畫面。\n牆上的圖太小看不清楚細節，那台才看得到完整的。",
             "emotion": "normal",
             "replies": [
               { "id": "r_1", "text": "為什麼要兩條腿？", "next": "why-two" },
