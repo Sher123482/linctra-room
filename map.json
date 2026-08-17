@@ -50,57 +50,6 @@
     { "id": 302, "objectKey": "big-leaves-indoor-plant", "packId": "basepack", "x": 22, "y": 9, "placementState": "placed", "placementSurface": "floor" },
 
     {
-      "id": 504,
-      "objectKey": "log-entry",
-      "packId": "basepack",
-      "x": 6, "y": 5,
-      "placementState": "placed",
-      "placementSurface": "floor",
-      "custom": {
-        "name": "如何驗證",
-        "detail": "牆上四張圖的資料全部來自公開的 OKX 永續 K 線。\n策略同時存在兩個獨立實作：TradingView 的 Pine 腳本與 Python 引擎。\n兩者逐筆比對 147 筆中對上 145 筆（98.6%），方向 100% 一致，進場價平均誤差 0.0587%。\n\n資金曲線採 Python 實戰口徑，已扣除資金費與滑點；TradingView 無法模擬資金費，其顯示數字會更高。"
-      }
-    },
-
-    {
-      "id": 501,
-      "objectKey": "log-entry",
-      "packId": "basepack",
-      "x": 8, "y": 5,
-      "placementState": "placed",
-      "placementSurface": "floor",
-      "custom": {
-        "name": "ADA 腿 · 狀態",
-        "detail": "CAGR 94.0% ｜ 最大回撤 -32.5% ｜ Sharpe 1.55\n狀態燈號：黃（連續虧損達歷史極值、未創新高天數逼近警戒）\n※ 含資金費與滑點的實戰口徑"
-      }
-    },
-    {
-      "id": 502,
-      "objectKey": "log-entry",
-      "packId": "basepack",
-      "x": 15, "y": 5,
-      "placementState": "placed",
-      "placementSurface": "floor",
-      "custom": {
-        "name": "BTC 腿 · 狀態",
-        "detail": "CAGR 115.6% ｜ 最大回撤 -25.4% ｜ Sharpe 2.13\n狀態燈號：綠\n※ 含資金費與滑點的實戰口徑"
-      }
-    },
-    {
-      "id": 503,
-      "objectKey": "log-entry",
-      "packId": "basepack",
-      "x": 13, "y": 8,
-      "placementState": "placed",
-      "placementSurface": "floor",
-      "custom": {
-        "name": "組合 · 狀態",
-        "detail": "配置 ADA 30% / BTC 70%，每月再平衡\nCAGR 121.1% ｜ 最大回撤 -23.0% ｜ Sharpe 2.54\n兩腿日頻相關係數 0.10"
-      }
-    },
-
-
-    {
       "id": 701,
       "objectKey": "large-customize-painting",
       "packId": "biglazycat",
