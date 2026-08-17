@@ -97,7 +97,7 @@
       "x": 2, "y": 1,
       "placementState": "placed",
       "placementSurface": "wall",
-      "custom": { "image": "https://GITHUB-USERNAME.github.io/linctra-room/chart-ada.png" }
+      "custom": { "image": "https://Sher123482.github.io/linctra-room/chart-ada.png" }
     },
     {
       "id": 702,
@@ -115,7 +115,7 @@
       "x": 11, "y": 1,
       "placementState": "placed",
       "placementSurface": "wall",
-      "custom": { "image": "https://GITHUB-USERNAME.github.io/linctra-room/chart-combo.png" }
+      "custom": { "image": "https://Sher123482.github.io/linctra-room/chart-combo.png" }
     },
     {
       "id": 704,
@@ -124,7 +124,7 @@
       "x": 14, "y": 1,
       "placementState": "placed",
       "placementSurface": "wall",
-      "custom": { "image": "https://GITHUB-USERNAME.github.io/linctra-room/chart-verify.png" }
+      "custom": { "image": "https://Sher123482.github.io/linctra-room/chart-verify.png" }
     },
     {
       "id": 705,
@@ -133,7 +133,7 @@
       "x": 20, "y": 1,
       "placementState": "placed",
       "placementSurface": "wall",
-      "custom": { "image": "https://GITHUB-USERNAME.github.io/linctra-room/chart-btc.png" }
+      "custom": { "image": "https://Sher123482.github.io/linctra-room/chart-btc.png" }
     },
 
     { "id": 706, "objectKey": "cylinder-shaped-wall-lamp", "packId": "basepack", "x": 4,  "y": 1, "placementState": "placed", "placementSurface": "wall" },
@@ -262,7 +262,7 @@
           },
           "where": {
             "type": "dialog",
-            "message": "https://github.com/GITHUB-USERNAME/linctra-room\n[wait]\n每天一次提交，就算當天沒有交易也提交。\ngit 的歷史帶時間戳而且無法回頭竄改——改掉任何一個舊紀錄，之後所有的雜湊都會變。\n[wait]\n累積得越久，它就越難造假。這是唯一會隨時間變強的證據。",
+            "message": "https://github.com/Sher123482/linctra-room\n[wait]\n每天一次提交，就算當天沒有交易也提交。\ngit 的歷史帶時間戳而且無法回頭竄改——改掉任何一個舊紀錄，之後所有的雜湊都會變。\n[wait]\n累積得越久，它就越難造假。這是唯一會隨時間變強的證據。",
             "emotion": "normal",
             "replies": [
               { "id": "r_1", "text": "我去看看", "actionKey": "end-dialog" }
