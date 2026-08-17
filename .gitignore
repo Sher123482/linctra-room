@@ -17,6 +17,15 @@
 !signals/
 !signals/*.json
 
+# 每月狀態存證。attest.py 刻意放在根目錄而不是 tools/：
+# 它要在 GitHub Actions 上執行所以必須公開，而 tools/ 的原則是「一律不公開」。
+# 公開的程式放公開區，界線才不會被開洞。
+!attest.py
+!attestations.jsonl
+!.github/
+!.github/workflows/
+!.github/workflows/*.yml
+
 # spec-private.json 含 salt 與完整參數，絕不上傳。
 # 上面的 * 已經擋住它了，這裡明寫一次是為了讓意圖清楚，
 # 也防止日後有人改動白名單時誤放行。
