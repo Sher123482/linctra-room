@@ -1,0 +1,865 @@
+{
+  "leg": "ADA",
+  "instrument": "OKX ADAUSDT.P",
+  "timeframe": "4h",
+  "disclosure": "三刀流均線策略，黃金/死亡交叉進場。其餘規則與全部參數未公開。",
+  "spec_sha256": "2140d80f204953ab948e6fd98ef1fb5399c408ebfdfad95f1009145affb07ad2",
+  "spec_committed_at": "2026-08-17T06:42:23Z",
+  "source": "TradingView strategy tester trade list export",
+  "source_export_date": "2026-08-16",
+  "generated_at": "2026-08-17T06:47:08Z",
+  "notes": [
+    "只含已平倉交易，未平倉部位不在此列 —— 公開持倉中的部位等於送出可用訊號。",
+    "seq 沿用 TradingView 自己的交易編號，連續且不可挑選；缺號即代表有交易未被公開。",
+    "spec_committed_at 之前的交易屬於歷史區間，不構成前瞻性證據。真正無法事後偽造的是承諾日之後、隨每次提交累積上去的紀錄。",
+    "ret_pct 為 TradingView 口徑的單筆報酬，未計永續資金費；牆上的資金曲線用的是含資金費與滑點的 Python 實戰口徑，數字較低。",
+    "驗證方式：取公開的 OKX K 線，逐筆核對進出場時間與價格。"
+  ],
+  "counts": {
+    "closed_total": 84,
+    "after_commitment": 0,
+    "seq_gaps": []
+  },
+  "trades": [
+    {
+      "seq": 1,
+      "side": "long",
+      "entry": "2020-07-01 08:00",
+      "exit": "2020-07-19 08:00",
+      "entry_price": 0.083,
+      "exit_price": 0.1223,
+      "ret_pct": 47.05,
+      "bars": 108
+    },
+    {
+      "seq": 2,
+      "side": "long",
+      "entry": "2020-07-25 12:00",
+      "exit": "2020-08-03 12:00",
+      "entry_price": 0.1297,
+      "exit_price": 0.1343,
+      "ret_pct": 3.34,
+      "bars": 54
+    },
+    {
+      "seq": 3,
+      "side": "short",
+      "entry": "2020-09-17 08:00",
+      "exit": "2020-09-25 00:00",
+      "entry_price": 0.0913,
+      "exit_price": 0.0811,
+      "ret_pct": 10.97,
+      "bars": 46
+    },
+    {
+      "seq": 4,
+      "side": "short",
+      "entry": "2020-10-04 12:00",
+      "exit": "2020-10-05 00:00",
+      "entry_price": 0.0924,
+      "exit_price": 0.0973,
+      "ret_pct": -5.5,
+      "bars": 3
+    },
+    {
+      "seq": 5,
+      "side": "long",
+      "entry": "2020-10-10 16:00",
+      "exit": "2020-10-19 00:00",
+      "entry_price": 0.1071,
+      "exit_price": 0.1061,
+      "ret_pct": -1.13,
+      "bars": 50
+    },
+    {
+      "seq": 6,
+      "side": "long",
+      "entry": "2020-10-23 04:00",
+      "exit": "2020-10-26 20:00",
+      "entry_price": 0.1112,
+      "exit_price": 0.1009,
+      "ret_pct": -9.44,
+      "bars": 22
+    },
+    {
+      "seq": 7,
+      "side": "long",
+      "entry": "2020-11-06 20:00",
+      "exit": "2020-11-15 16:00",
+      "entry_price": 0.1064,
+      "exit_price": 0.1047,
+      "ret_pct": -1.79,
+      "bars": 53
+    },
+    {
+      "seq": 8,
+      "side": "long",
+      "entry": "2020-11-18 12:00",
+      "exit": "2020-12-07 08:00",
+      "entry_price": 0.1112,
+      "exit_price": 0.1586,
+      "ret_pct": 42.34,
+      "bars": 113
+    },
+    {
+      "seq": 9,
+      "side": "long",
+      "entry": "2021-01-15 00:00",
+      "exit": "2021-01-16 00:00",
+      "entry_price": 0.3175,
+      "exit_price": 0.2887,
+      "ret_pct": -9.25,
+      "bars": 6
+    },
+    {
+      "seq": 10,
+      "side": "long",
+      "entry": "2021-01-31 08:00",
+      "exit": "2021-02-11 04:00",
+      "entry_price": 0.3643,
+      "exit_price": 0.9472,
+      "ret_pct": 159.49,
+      "bars": 65
+    },
+    {
+      "seq": 11,
+      "side": "long",
+      "entry": "2021-03-18 04:00",
+      "exit": "2021-03-23 00:00",
+      "entry_price": 1.2667,
+      "exit_price": 1.1524,
+      "ret_pct": -9.21,
+      "bars": 29
+    },
+    {
+      "seq": 12,
+      "side": "short",
+      "entry": "2021-03-23 20:00",
+      "exit": "2021-03-26 16:00",
+      "entry_price": 1.1281,
+      "exit_price": 1.1848,
+      "ret_pct": -5.23,
+      "bars": 17
+    },
+    {
+      "seq": 13,
+      "side": "long",
+      "entry": "2021-04-06 16:00",
+      "exit": "2021-04-18 08:00",
+      "entry_price": 1.2026,
+      "exit_price": 1.0941,
+      "ret_pct": -9.2,
+      "bars": 70
+    },
+    {
+      "seq": 14,
+      "side": "long",
+      "entry": "2021-04-28 08:00",
+      "exit": "2021-05-17 12:00",
+      "entry_price": 1.3059,
+      "exit_price": 2.0716,
+      "ret_pct": 58.32,
+      "bars": 115
+    },
+    {
+      "seq": 15,
+      "side": "short",
+      "entry": "2021-06-08 12:00",
+      "exit": "2021-06-09 20:00",
+      "entry_price": 1.523,
+      "exit_price": 1.5994,
+      "ret_pct": -5.22,
+      "bars": 8
+    },
+    {
+      "seq": 16,
+      "side": "short",
+      "entry": "2021-06-18 20:00",
+      "exit": "2021-06-22 04:00",
+      "entry_price": 1.473,
+      "exit_price": 1.1784,
+      "ret_pct": 19.8,
+      "bars": 20
+    },
+    {
+      "seq": 17,
+      "side": "short",
+      "entry": "2021-07-09 20:00",
+      "exit": "2021-07-20 08:00",
+      "entry_price": 1.3227,
+      "exit_price": 1.0581,
+      "ret_pct": 19.8,
+      "bars": 63
+    },
+    {
+      "seq": 18,
+      "side": "short",
+      "entry": "2021-09-29 00:00",
+      "exit": "2021-10-01 16:00",
+      "entry_price": 2.0739,
+      "exit_price": 2.1778,
+      "ret_pct": -5.21,
+      "bars": 16
+    },
+    {
+      "seq": 19,
+      "side": "short",
+      "entry": "2021-10-12 00:00",
+      "exit": "2021-10-23 08:00",
+      "entry_price": 2.2023,
+      "exit_price": 2.1578,
+      "ret_pct": 1.82,
+      "bars": 68
+    },
+    {
+      "seq": 20,
+      "side": "short",
+      "entry": "2021-12-04 16:00",
+      "exit": "2021-12-04 20:00",
+      "entry_price": 1.3469,
+      "exit_price": 1.4145,
+      "ret_pct": -5.22,
+      "bars": 1
+    },
+    {
+      "seq": 21,
+      "side": "short",
+      "entry": "2022-01-22 04:00",
+      "exit": "2022-01-22 16:00",
+      "entry_price": 1.1845,
+      "exit_price": 0.9476,
+      "ret_pct": 19.8,
+      "bars": 3
+    },
+    {
+      "seq": 22,
+      "side": "short",
+      "entry": "2022-02-13 08:00",
+      "exit": "2022-02-15 20:00",
+      "entry_price": 1.0583,
+      "exit_price": 1.1115,
+      "ret_pct": -5.23,
+      "bars": 15
+    },
+    {
+      "seq": 23,
+      "side": "short",
+      "entry": "2022-05-08 12:00",
+      "exit": "2022-05-10 08:00",
+      "entry_price": 0.7403,
+      "exit_price": 0.5922,
+      "ret_pct": 19.81,
+      "bars": 11
+    },
+    {
+      "seq": 24,
+      "side": "short",
+      "entry": "2022-06-30 00:00",
+      "exit": "2022-07-08 00:00",
+      "entry_price": 0.467,
+      "exit_price": 0.4705,
+      "ret_pct": -0.95,
+      "bars": 48
+    },
+    {
+      "seq": 25,
+      "side": "short",
+      "entry": "2022-07-12 16:00",
+      "exit": "2022-07-16 04:00",
+      "entry_price": 0.4319,
+      "exit_price": 0.4537,
+      "ret_pct": -5.25,
+      "bars": 21
+    },
+    {
+      "seq": 26,
+      "side": "short",
+      "entry": "2022-07-27 12:00",
+      "exit": "2022-07-28 00:00",
+      "entry_price": 0.4596,
+      "exit_price": 0.4828,
+      "ret_pct": -5.25,
+      "bars": 3
+    },
+    {
+      "seq": 27,
+      "side": "short",
+      "entry": "2022-08-19 12:00",
+      "exit": "2022-09-02 16:00",
+      "entry_price": 0.4922,
+      "exit_price": 0.4589,
+      "ret_pct": 6.57,
+      "bars": 85
+    },
+    {
+      "seq": 28,
+      "side": "short",
+      "entry": "2022-09-03 04:00",
+      "exit": "2022-09-03 12:00",
+      "entry_price": 0.4504,
+      "exit_price": 0.4732,
+      "ret_pct": -5.26,
+      "bars": 2
+    },
+    {
+      "seq": 29,
+      "side": "short",
+      "entry": "2022-09-15 04:00",
+      "exit": "2022-10-04 12:00",
+      "entry_price": 0.4801,
+      "exit_price": 0.4283,
+      "ret_pct": 10.59,
+      "bars": 116
+    },
+    {
+      "seq": 30,
+      "side": "long",
+      "entry": "2022-11-05 16:00",
+      "exit": "2022-11-08 08:00",
+      "entry_price": 0.4302,
+      "exit_price": 0.3912,
+      "ret_pct": -9.25,
+      "bars": 16
+    },
+    {
+      "seq": 31,
+      "side": "short",
+      "entry": "2022-11-09 04:00",
+      "exit": "2022-11-20 04:00",
+      "entry_price": 0.3681,
+      "exit_price": 0.3283,
+      "ret_pct": 10.61,
+      "bars": 66
+    },
+    {
+      "seq": 32,
+      "side": "short",
+      "entry": "2022-12-08 12:00",
+      "exit": "2022-12-22 20:00",
+      "entry_price": 0.3093,
+      "exit_price": 0.2474,
+      "ret_pct": 19.81,
+      "bars": 85
+    },
+    {
+      "seq": 33,
+      "side": "short",
+      "entry": "2022-12-29 00:00",
+      "exit": "2023-01-04 08:00",
+      "entry_price": 0.2502,
+      "exit_price": 0.263,
+      "ret_pct": -5.32,
+      "bars": 38
+    },
+    {
+      "seq": 34,
+      "side": "short",
+      "entry": "2023-03-28 04:00",
+      "exit": "2023-03-28 20:00",
+      "entry_price": 0.3401,
+      "exit_price": 0.3574,
+      "ret_pct": -5.29,
+      "bars": 4
+    },
+    {
+      "seq": 35,
+      "side": "long",
+      "entry": "2023-03-29 12:00",
+      "exit": "2023-04-08 08:00",
+      "entry_price": 0.3774,
+      "exit_price": 0.3833,
+      "ret_pct": 1.36,
+      "bars": 59
+    },
+    {
+      "seq": 36,
+      "side": "short",
+      "entry": "2023-05-02 16:00",
+      "exit": "2023-05-16 16:00",
+      "entry_price": 0.3865,
+      "exit_price": 0.3686,
+      "ret_pct": 4.43,
+      "bars": 84
+    },
+    {
+      "seq": 37,
+      "side": "long",
+      "entry": "2023-05-29 04:00",
+      "exit": "2023-06-06 12:00",
+      "entry_price": 0.3773,
+      "exit_price": 0.3503,
+      "ret_pct": -7.34,
+      "bars": 50
+    },
+    {
+      "seq": 38,
+      "side": "short",
+      "entry": "2023-06-29 04:00",
+      "exit": "2023-06-30 08:00",
+      "entry_price": 0.2672,
+      "exit_price": 0.2808,
+      "ret_pct": -5.29,
+      "bars": 7
+    },
+    {
+      "seq": 39,
+      "side": "long",
+      "entry": "2023-07-12 08:00",
+      "exit": "2023-07-21 16:00",
+      "entry_price": 0.2931,
+      "exit_price": 0.3118,
+      "ret_pct": 6.17,
+      "bars": 56
+    },
+    {
+      "seq": 40,
+      "side": "long",
+      "entry": "2023-07-30 08:00",
+      "exit": "2023-08-03 08:00",
+      "entry_price": 0.3132,
+      "exit_price": 0.2991,
+      "ret_pct": -4.69,
+      "bars": 24
+    },
+    {
+      "seq": 41,
+      "side": "short",
+      "entry": "2023-08-13 12:00",
+      "exit": "2023-08-18 04:00",
+      "entry_price": 0.2911,
+      "exit_price": 0.2328,
+      "ret_pct": 19.83,
+      "bars": 28
+    },
+    {
+      "seq": 42,
+      "side": "short",
+      "entry": "2023-09-01 16:00",
+      "exit": "2023-09-17 20:00",
+      "entry_price": 0.256,
+      "exit_price": 0.2503,
+      "ret_pct": 2.03,
+      "bars": 97
+    },
+    {
+      "seq": 43,
+      "side": "short",
+      "entry": "2023-09-18 08:00",
+      "exit": "2023-09-30 00:00",
+      "entry_price": 0.2468,
+      "exit_price": 0.2551,
+      "ret_pct": -3.56,
+      "bars": 70
+    },
+    {
+      "seq": 44,
+      "side": "long",
+      "entry": "2023-09-30 00:00",
+      "exit": "2023-10-09 20:00",
+      "entry_price": 0.2551,
+      "exit_price": 0.2507,
+      "ret_pct": -1.92,
+      "bars": 59
+    },
+    {
+      "seq": 45,
+      "side": "short",
+      "entry": "2023-10-09 20:00",
+      "exit": "2023-10-19 00:00",
+      "entry_price": 0.2507,
+      "exit_price": 0.2451,
+      "ret_pct": 2.03,
+      "bars": 55
+    },
+    {
+      "seq": 46,
+      "side": "long",
+      "entry": "2023-10-21 04:00",
+      "exit": "2023-11-16 16:00",
+      "entry_price": 0.2515,
+      "exit_price": 0.3962,
+      "ret_pct": 57.22,
+      "bars": 159
+    },
+    {
+      "seq": 47,
+      "side": "long",
+      "entry": "2023-11-17 08:00",
+      "exit": "2023-11-18 00:00",
+      "entry_price": 0.3707,
+      "exit_price": 0.3552,
+      "ret_pct": -4.37,
+      "bars": 4
+    },
+    {
+      "seq": 48,
+      "side": "long",
+      "entry": "2023-11-18 08:00",
+      "exit": "2023-11-29 20:00",
+      "entry_price": 0.3673,
+      "exit_price": 0.3839,
+      "ret_pct": 4.31,
+      "bars": 69
+    },
+    {
+      "seq": 49,
+      "side": "long",
+      "entry": "2023-12-01 12:00",
+      "exit": "2023-12-13 04:00",
+      "entry_price": 0.3793,
+      "exit_price": 0.5724,
+      "ret_pct": 50.61,
+      "bars": 70
+    },
+    {
+      "seq": 50,
+      "side": "long",
+      "entry": "2023-12-23 16:00",
+      "exit": "2024-01-01 00:00",
+      "entry_price": 0.6035,
+      "exit_price": 0.6003,
+      "ret_pct": -0.73,
+      "bars": 50
+    },
+    {
+      "seq": 51,
+      "side": "short",
+      "entry": "2024-01-17 04:00",
+      "exit": "2024-01-25 20:00",
+      "entry_price": 0.5395,
+      "exit_price": 0.4796,
+      "ret_pct": 10.9,
+      "bars": 52
+    },
+    {
+      "seq": 52,
+      "side": "short",
+      "entry": "2024-02-06 16:00",
+      "exit": "2024-02-08 12:00",
+      "entry_price": 0.4931,
+      "exit_price": 0.518,
+      "ret_pct": -5.25,
+      "bars": 11
+    },
+    {
+      "seq": 53,
+      "side": "long",
+      "entry": "2024-02-09 12:00",
+      "exit": "2024-02-24 00:00",
+      "entry_price": 0.5345,
+      "exit_price": 0.5781,
+      "ret_pct": 7.94,
+      "bars": 87
+    },
+    {
+      "seq": 54,
+      "side": "short",
+      "entry": "2024-04-01 20:00",
+      "exit": "2024-04-10 12:00",
+      "entry_price": 0.6273,
+      "exit_price": 0.5828,
+      "ret_pct": 6.89,
+      "bars": 52
+    },
+    {
+      "seq": 55,
+      "side": "short",
+      "entry": "2024-04-13 00:00",
+      "exit": "2024-04-14 00:00",
+      "entry_price": 0.564,
+      "exit_price": 0.4512,
+      "ret_pct": 19.8,
+      "bars": 6
+    },
+    {
+      "seq": 56,
+      "side": "short",
+      "entry": "2024-04-27 04:00",
+      "exit": "2024-05-05 08:00",
+      "entry_price": 0.4644,
+      "exit_price": 0.4633,
+      "ret_pct": 0.04,
+      "bars": 49
+    },
+    {
+      "seq": 57,
+      "side": "short",
+      "entry": "2024-05-08 16:00",
+      "exit": "2024-05-08 20:00",
+      "entry_price": 0.4387,
+      "exit_price": 0.4609,
+      "ret_pct": -5.26,
+      "bars": 1
+    },
+    {
+      "seq": 58,
+      "side": "short",
+      "entry": "2024-05-09 08:00",
+      "exit": "2024-05-17 12:00",
+      "entry_price": 0.4517,
+      "exit_price": 0.4745,
+      "ret_pct": -5.25,
+      "bars": 49
+    },
+    {
+      "seq": 59,
+      "side": "long",
+      "entry": "2024-06-05 12:00",
+      "exit": "2024-06-09 04:00",
+      "entry_price": 0.4631,
+      "exit_price": 0.434,
+      "ret_pct": -6.47,
+      "bars": 22
+    },
+    {
+      "seq": 60,
+      "side": "short",
+      "entry": "2024-06-09 04:00",
+      "exit": "2024-06-21 12:00",
+      "entry_price": 0.434,
+      "exit_price": 0.3872,
+      "ret_pct": 10.58,
+      "bars": 74
+    },
+    {
+      "seq": 61,
+      "side": "long",
+      "entry": "2024-07-11 20:00",
+      "exit": "2024-07-23 12:00",
+      "entry_price": 0.396,
+      "exit_price": 0.4258,
+      "ret_pct": 7.31,
+      "bars": 70
+    },
+    {
+      "seq": 62,
+      "side": "long",
+      "entry": "2024-10-21 08:00",
+      "exit": "2024-10-25 08:00",
+      "entry_price": 0.3652,
+      "exit_price": 0.3463,
+      "ret_pct": -5.36,
+      "bars": 24
+    },
+    {
+      "seq": 63,
+      "side": "short",
+      "entry": "2024-10-25 08:00",
+      "exit": "2024-10-30 08:00",
+      "entry_price": 0.3463,
+      "exit_price": 0.3639,
+      "ret_pct": -5.28,
+      "bars": 30
+    },
+    {
+      "seq": 64,
+      "side": "short",
+      "entry": "2024-11-04 16:00",
+      "exit": "2024-11-06 08:00",
+      "entry_price": 0.3301,
+      "exit_price": 0.3469,
+      "ret_pct": -5.29,
+      "bars": 10
+    },
+    {
+      "seq": 65,
+      "side": "long",
+      "entry": "2024-11-08 00:00",
+      "exit": "2024-11-20 00:00",
+      "entry_price": 0.3888,
+      "exit_price": 0.7296,
+      "ret_pct": 87.28,
+      "bars": 72
+    },
+    {
+      "seq": 66,
+      "side": "long",
+      "entry": "2025-01-16 08:00",
+      "exit": "2025-01-20 04:00",
+      "entry_price": 1.0759,
+      "exit_price": 0.9788,
+      "ret_pct": -9.21,
+      "bars": 23
+    },
+    {
+      "seq": 67,
+      "side": "short",
+      "entry": "2025-03-29 16:00",
+      "exit": "2025-04-07 12:00",
+      "entry_price": 0.6832,
+      "exit_price": 0.5465,
+      "ret_pct": 19.81,
+      "bars": 53
+    },
+    {
+      "seq": 68,
+      "side": "short",
+      "entry": "2025-04-18 08:00",
+      "exit": "2025-04-21 12:00",
+      "entry_price": 0.6166,
+      "exit_price": 0.6477,
+      "ret_pct": -5.24,
+      "bars": 19
+    },
+    {
+      "seq": 69,
+      "side": "long",
+      "entry": "2025-05-23 12:00",
+      "exit": "2025-05-23 20:00",
+      "entry_price": 0.8382,
+      "exit_price": 0.7625,
+      "ret_pct": -9.21,
+      "bars": 2
+    },
+    {
+      "seq": 70,
+      "side": "long",
+      "entry": "2025-05-29 12:00",
+      "exit": "2025-05-30 08:00",
+      "entry_price": 0.7578,
+      "exit_price": 0.6893,
+      "ret_pct": -9.22,
+      "bars": 5
+    },
+    {
+      "seq": 71,
+      "side": "short",
+      "entry": "2025-06-14 12:00",
+      "exit": "2025-06-29 00:00",
+      "entry_price": 0.6356,
+      "exit_price": 0.5641,
+      "ret_pct": 11.05,
+      "bars": 87
+    },
+    {
+      "seq": 72,
+      "side": "long",
+      "entry": "2025-08-08 08:00",
+      "exit": "2025-08-21 12:00",
+      "entry_price": 0.7874,
+      "exit_price": 0.8846,
+      "ret_pct": 12.12,
+      "bars": 79
+    },
+    {
+      "seq": 73,
+      "side": "short",
+      "entry": "2025-10-09 20:00",
+      "exit": "2025-10-11 04:00",
+      "entry_price": 0.8118,
+      "exit_price": 0.6494,
+      "ret_pct": 19.81,
+      "bars": 8
+    },
+    {
+      "seq": 74,
+      "side": "short",
+      "entry": "2025-10-30 20:00",
+      "exit": "2025-11-05 04:00",
+      "entry_price": 0.6284,
+      "exit_price": 0.5027,
+      "ret_pct": 19.8,
+      "bars": 32
+    },
+    {
+      "seq": 75,
+      "side": "long",
+      "entry": "2026-01-03 12:00",
+      "exit": "2026-01-11 16:00",
+      "entry_price": 0.3983,
+      "exit_price": 0.391,
+      "ret_pct": -2.03,
+      "bars": 49
+    },
+    {
+      "seq": 76,
+      "side": "long",
+      "entry": "2026-01-15 00:00",
+      "exit": "2026-01-16 20:00",
+      "entry_price": 0.4199,
+      "exit_price": 0.3819,
+      "ret_pct": -9.23,
+      "bars": 11
+    },
+    {
+      "seq": 77,
+      "side": "short",
+      "entry": "2026-02-22 00:00",
+      "exit": "2026-02-26 00:00",
+      "entry_price": 0.282,
+      "exit_price": 0.2963,
+      "ret_pct": -5.27,
+      "bars": 24
+    },
+    {
+      "seq": 78,
+      "side": "short",
+      "entry": "2026-03-21 16:00",
+      "exit": "2026-04-06 12:00",
+      "entry_price": 0.2645,
+      "exit_price": 0.2572,
+      "ret_pct": 2.56,
+      "bars": 95
+    },
+    {
+      "seq": 79,
+      "side": "long",
+      "entry": "2026-04-17 16:00",
+      "exit": "2026-04-25 20:00",
+      "entry_price": 0.2564,
+      "exit_price": 0.2513,
+      "ret_pct": -2.18,
+      "bars": 49
+    },
+    {
+      "seq": 80,
+      "side": "short",
+      "entry": "2026-04-27 16:00",
+      "exit": "2026-05-03 16:00",
+      "entry_price": 0.2464,
+      "exit_price": 0.2487,
+      "ret_pct": -1.13,
+      "bars": 36
+    },
+    {
+      "seq": 81,
+      "side": "long",
+      "entry": "2026-05-03 16:00",
+      "exit": "2026-05-04 20:00",
+      "entry_price": 0.2487,
+      "exit_price": 0.248,
+      "ret_pct": -0.48,
+      "bars": 7
+    },
+    {
+      "seq": 82,
+      "side": "short",
+      "entry": "2026-05-04 20:00",
+      "exit": "2026-05-06 04:00",
+      "entry_price": 0.248,
+      "exit_price": 0.2606,
+      "ret_pct": -5.28,
+      "bars": 8
+    },
+    {
+      "seq": 83,
+      "side": "long",
+      "entry": "2026-07-18 12:00",
+      "exit": "2026-07-26 12:00",
+      "entry_price": 0.168,
+      "exit_price": 0.1652,
+      "ret_pct": -1.86,
+      "bars": 48
+    },
+    {
+      "seq": 84,
+      "side": "long",
+      "entry": "2026-08-01 04:00",
+      "exit": "2026-08-12 08:00",
+      "entry_price": 0.1707,
+      "exit_price": 0.1866,
+      "ret_pct": 9.1,
+      "bars": 67
+    }
+  ]
+}
