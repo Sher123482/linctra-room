@@ -240,7 +240,8 @@
             "replies": [
               { "id": "r_1", "text": "給我看完整績效表", "next": "table" },
               { "id": "r_2", "text": "這還不是你自己說的？", "next": "selfreport" },
-              { "id": "r_3", "text": "怎麼知道不是過度最佳化？", "next": "overfit" }
+              { "id": "r_3", "text": "怎麼知道不是過度最佳化？", "next": "overfit" },
+              { "id": "r_4", "text": "我先自己看看", "actionKey": "end-dialog" }
             ]
           },
           "table": {
@@ -250,7 +251,8 @@
             "replies": [
               { "id": "r_1", "text": "組合怎麼會比兩條腿都高？", "next": "rebalance" },
               { "id": "r_2", "text": "牆上那兩張數字不一樣", "next": "tvgap" },
-              { "id": "r_3", "text": "這還不是你自己說的？", "next": "selfreport" }
+              { "id": "r_3", "text": "這還不是你自己說的？", "next": "selfreport" },
+              { "id": "r_4", "text": "夠了，謝謝", "actionKey": "end-dialog" }
             ]
           },
           "tvgap": {
@@ -259,7 +261,8 @@
             "emotion": "normal",
             "replies": [
               { "id": "r_1", "text": "為什麼要放 TV 的原圖？", "next": "whytv" },
-              { "id": "r_2", "text": "成本算進去了嗎？", "next": "costs" }
+              { "id": "r_2", "text": "成本算進去了嗎？", "next": "costs" },
+              { "id": "r_3", "text": "了解了", "actionKey": "end-dialog" }
             ]
           },
           "whytv": {
@@ -302,7 +305,8 @@
             "emotion": "thinking",
             "replies": [
               { "id": "r_1", "text": "那你們怎麼做？", "next": "howto" },
-              { "id": "r_2", "text": "怎麼知道不是過度最佳化？", "next": "overfit" }
+              { "id": "r_2", "text": "怎麼知道不是過度最佳化？", "next": "overfit" },
+              { "id": "r_3", "text": "先這樣，我再想想", "actionKey": "end-dialog" }
             ]
           },
           "howto": {
@@ -311,7 +315,8 @@
             "emotion": "determined",
             "replies": [
               { "id": "r_1", "text": "紀錄在哪裡？", "next": "where" },
-              { "id": "r_2", "text": "為什麼不直接公開腳本？", "next": "whynot" }
+              { "id": "r_2", "text": "為什麼不直接公開腳本？", "next": "whynot" },
+              { "id": "r_3", "text": "先這樣", "actionKey": "end-dialog" }
             ]
           },
           "whynot": {
@@ -337,7 +342,8 @@
             "emotion": "normal",
             "replies": [
               { "id": "r_1", "text": "這點我欣賞", "next": "gap" },
-              { "id": "r_2", "text": "怎麼知道不是過度最佳化？", "next": "overfit" }
+              { "id": "r_2", "text": "怎麼知道不是過度最佳化？", "next": "overfit" },
+              { "id": "r_3", "text": "知道了", "actionKey": "end-dialog" }
             ]
           },
           "overfit": {
@@ -346,7 +352,8 @@
             "emotion": "normal",
             "replies": [
               { "id": "r_1", "text": "紀錄在哪裡？", "next": "where" },
-              { "id": "r_2", "text": "這還不是你自己說的？", "next": "selfreport" }
+              { "id": "r_2", "text": "這還不是你自己說的？", "next": "selfreport" },
+              { "id": "r_3", "text": "先這樣", "actionKey": "end-dialog" }
             ]
           },
           "gap": {
