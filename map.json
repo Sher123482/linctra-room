@@ -138,8 +138,24 @@
 
     { "id": 706, "objectKey": "cylinder-shaped-wall-lamp", "packId": "basepack", "x": 4,  "y": 1, "placementState": "placed", "placementSurface": "wall" },
     { "id": 707, "objectKey": "cylinder-shaped-wall-lamp", "packId": "basepack", "x": 13, "y": 1, "placementState": "placed", "placementSurface": "wall" },
-    { "id": 708, "objectKey": "cylinder-shaped-wall-lamp", "packId": "basepack", "x": 17, "y": 1, "placementState": "placed", "placementSurface": "wall" },
-    { "id": 709, "objectKey": "double-pane-window",        "packId": "basepack", "x": 18, "y": 2, "placementState": "placed", "placementSurface": "wall" },
+    {
+      "id": 708,
+      "objectKey": "large-customize-painting",
+      "packId": "biglazycat",
+      "x": 16, "y": 1,
+      "placementState": "placed",
+      "placementSurface": "wall",
+      "custom": { "image": "https://Sher123482.github.io/linctra-room/chart-tv-ada.png" }
+    },
+    {
+      "id": 709,
+      "objectKey": "large-customize-painting",
+      "packId": "biglazycat",
+      "x": 18, "y": 1,
+      "placementState": "placed",
+      "placementSurface": "wall",
+      "custom": { "image": "https://Sher123482.github.io/linctra-room/chart-tv-btc.png" }
+    },
 
     { "id": 801, "objectKey": "small-led-board", "packId": "biglazycat", "x": 3,  "y": 8, "placementState": "placed", "placementSurface": "floor", "custom": { "title": "1.55", "fontSize": "7" } },
     { "id": 802, "objectKey": "small-led-board", "packId": "biglazycat", "x": 11, "y": 8, "placementState": "placed", "placementSurface": "floor", "custom": { "title": "2.54", "fontSize": "7" } },
@@ -239,8 +255,25 @@
             "emotion": "normal",
             "replies": [
               { "id": "r_1", "text": "組合怎麼會比兩條腿都高？", "next": "rebalance" },
-              { "id": "r_2", "text": "成本算進去了嗎？", "next": "costs" },
+              { "id": "r_2", "text": "牆上那兩張數字不一樣", "next": "tvgap" },
               { "id": "r_3", "text": "這還不是你自己說的？", "next": "selfreport" }
+            ]
+          },
+          "tvgap": {
+            "type": "dialog",
+            "message": "你看得很仔細。右邊那兩張是 TradingView 的原始輸出，寫的是 +727% 和 +834%。\n[wait]\n差別在期間和成本：那兩張是 2022 年 10 月起算的四年，而且是 TV 口徑，沒有資金費。\n我剛報的表格從 2020 年開始，含資金費與滑點。\n[wait]\n拿同一個四年窗口、同樣只算手續費重跑一次：ADA 是 767%、BTC 是 875%——跟 TV 的 727% 與 834% 差距約 5%。\n[wait]\n所以兩邊沒有打架，是同一件事的兩種切法。而且這順便證明了不只逐筆交易對得上，連累積權益曲線也對得上。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "為什麼要放 TV 的原圖？", "next": "whytv" },
+              { "id": "r_2", "text": "成本算進去了嗎？", "next": "costs" }
+            ]
+          },
+          "whytv": {
+            "type": "dialog",
+            "message": "因為牆上其他幾張是我們自己畫的——理論上想畫成什麼樣都可以。\n[wait]\nTradingView 那兩張是它自己渲染的，連帳號浮水印都留著。多一層第三方的份量，偽造成本高得多。\n[wait]\n未經處理的原圖也一起公開在 repo 裡，檔名 tv-original-。你可以自己比對，確認我們只加了標題，沒動截圖本體。\n[wait]\n順帶一提，ADA 那張最值得看的不是 +727%——是同期間買入持有 -56.61%。標的自己跌掉一半，策略還是賺的。",
+            "emotion": "happy",
+            "replies": [
+              { "id": "r_1", "text": "這個確實不好造假", "actionKey": "end-dialog" }
             ]
           },
           "rebalance": {
