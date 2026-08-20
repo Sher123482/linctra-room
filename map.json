@@ -414,6 +414,145 @@
         }
       },
       "inventory": []
+    },
+    {
+      "id": "npc-live-okx",
+      "name": { "family": "實盤", "given": "員" },
+      "actorKey": "blue-hair-knight",
+      "packId": "basepack",
+      "x": 21,
+      "y": 5,
+      "facing": "down",
+      "enabled": true,
+      "collisionMode": "soft",
+      "behavior": {
+        "mode": "random-walk",
+        "randomWalkRadius": 1,
+        "walkSpeedTilesPerSecond": 1.8
+      },
+      "dialog": {
+        "entry": "start",
+        "nodes": {
+          "start": {
+            "type": "dialog",
+            "message": "牆上那些是回測，歷史區間。我不會假裝它是別的東西。\n[wait]\n如果你想看這套規則在真錢上跑成什麼樣——OKX 交易所的「信號策略」裡，交易員名稱 cardanonunu，這兩條腿都在那裡。\n[wait]\n那邊的數字是 OKX 算的，不是我算的。",
+            "emotion": "normal",
+            "replies": [
+              {
+                "id": "r_1",
+                "text": "怎麼找？",
+                "next": "howto"
+              },
+              {
+                "id": "r_2",
+                "text": "跟單前該注意什麼？",
+                "next": "risk"
+              },
+              {
+                "id": "r_3",
+                "text": "為什麼要告訴我這個？",
+                "next": "why"
+              },
+              {
+                "id": "r_4",
+                "text": "我先自己看看",
+                "actionKey": "end-dialog"
+              }
+            ]
+          },
+          "howto": {
+            "type": "dialog",
+            "message": "OKX 的 App 或網頁，交易底下找「信號策略」，搜尋交易員名稱 cardanonunu。\n[wait]\nADA 腿和 BTC 腿是分開的兩個策略，不是綁在一起的一包。你可以只跟其中一條。\n[wait]\n名稱和這個房間的紀錄對得上，時間軸也對得上——那正是我把規則承諾押在 8 月 17 日的原因。",
+            "emotion": "normal",
+            "replies": [
+              {
+                "id": "r_1",
+                "text": "跟單前該注意什麼？",
+                "next": "risk"
+              },
+              {
+                "id": "r_2",
+                "text": "知道了",
+                "actionKey": "end-dialog"
+              }
+            ]
+          },
+          "risk": {
+            "type": "dialog",
+            "message": "這段請你讀完再決定，我講直接一點。\n[wait]\n先把資金配置看清楚，不要用預設值就開始。訊號只告訴你什麼時候進場出場，它不會替你決定押多少——而爆倉幾乎從來不是策略錯了，是倉位開太大。\n[wait]\n牆上寫著 BTC 腿最大回撤 25.4%、ADA 腿 32.5%。那是策略本身的回撤，不含槓桿。\n[wait]\n你如果開三倍，這個數字要跟著乘：32.5% 變成 97.5%——你在走到那裡之前就已經被強制平倉了。策略還活著，你的倉位已經死了。",
+            "emotion": "determined",
+            "replies": [
+              {
+                "id": "r_1",
+                "text": "那我該怎麼配？",
+                "next": "sizing"
+              },
+              {
+                "id": "r_2",
+                "text": "回撤還會再發生嗎？",
+                "next": "drawdown"
+              },
+              {
+                "id": "r_3",
+                "text": "明白了",
+                "actionKey": "end-dialog"
+              }
+            ]
+          },
+          "drawdown": {
+            "type": "dialog",
+            "message": "會。回撤不是已經過去的事，是還會再來的事。\n[wait]\n歷史最大回撤只告訴你「過去最痛的一次有多痛」，它不是上限。真正來的那一次可能更深。\n[wait]\n所以配置要按「比歷史更糟也還活著」來算，不是按「剛好撐過歷史最大回撤」來算。",
+            "emotion": "determined",
+            "replies": [
+              {
+                "id": "r_1",
+                "text": "那我該怎麼配？",
+                "next": "sizing"
+              },
+              {
+                "id": "r_2",
+                "text": "了解了",
+                "actionKey": "end-dialog"
+              }
+            ]
+          },
+          "sizing": {
+            "type": "dialog",
+            "message": "我不能替你決定，那要看你的本金、你能承受多少、你手上還有沒有別的部位。\n[wait]\n但兩件事我可以說死：\n一、先算最壞情況你會賠多少，再回推倉位。不要反過來先決定押多少。\n二、用賠掉也不會改變你生活的錢。\n[wait]\n如果這兩件事你現在答不出來，那就先別跟。牆上的東西不會跑掉，你可以先看著。",
+            "emotion": "normal",
+            "replies": [
+              {
+                "id": "r_1",
+                "text": "記住了",
+                "actionKey": "end-dialog"
+              }
+            ]
+          },
+          "why": {
+            "type": "dialog",
+            "message": "因為這個房間裡所有東西都是我自己跑的回測。你有充分的理由不信。\n[wait]\nOKX 那邊的數字不是我算的，也不能事後修改，是第三方在記。這是我唯一拿得出來、不需要你信任我的東西。\n[wait]\n順帶一提，實盤也會讓你看到我虧錢的時候。那是應該的。",
+            "emotion": "normal",
+            "replies": [
+              {
+                "id": "r_1",
+                "text": "怎麼找？",
+                "next": "howto"
+              },
+              {
+                "id": "r_2",
+                "text": "跟單前該注意什麼？",
+                "next": "risk"
+              },
+              {
+                "id": "r_3",
+                "text": "了解",
+                "actionKey": "end-dialog"
+              }
+            ]
+          }
+        }
+      },
+      "inventory": []
     }
   ],
   "roomRuntime": {
