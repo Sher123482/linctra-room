@@ -125,12 +125,22 @@
         "nodes": {
           "start": {
             "type": "dialog",
-            "message": "歡迎光臨雙腿交易室。\n[wait]\n這裡展示的是一組實盤運行中的量化策略組合。\n左邊是 ADA 腿，右邊是 BTC 腿，中間是組合結果。\n你想先看哪一邊？",
+            "message": "歡迎光臨雙腿交易室。\n[wait]\n先報備一件事：這間房是房主自己蓋的，裡面的內容跟貓哥無關。細節你可以問我。\n[wait]\n這裡展示的是一組實盤運行中的量化策略組合。\n左邊是 ADA 腿，右邊是 BTC 腿，中間是組合結果。\n你想先看哪一邊？",
             "emotion": "normal",
             "replies": [
               { "id": "r_1", "text": "這裡是做什麼的？", "next": "about" },
               { "id": "r_2", "text": "這些數字可信嗎？", "next": "verify" },
-              { "id": "r_3", "text": "隨便看看", "actionKey": "end-dialog" }
+              { "id": "r_3", "text": "這間房跟平台什麼關係？", "next": "attribution" },
+              { "id": "r_4", "text": "隨便看看", "actionKey": "end-dialog" }
+            ]
+          },
+          "attribution": {
+            "type": "dialog",
+            "message": "這間房確實是《鏈次元》裡的房間，這點沒有要撇清。\n[wait]\n但貓哥蓋的是這個世界，不是這間房裡的東西。牆上的數字、策略規則、還有右後方那位實盤員講的每一句話，都是房主自己弄的，也由房主自己負責。\n[wait]\n貓哥沒有審核過那套策略，也沒有替它背書。他做的事是給了房主一個地方，把東西攤開來讓人看——這個機會，房主要我一定要說一聲謝謝。\n[wait]\n所以要信不信，你自己看完再決定。別因為它出現在《鏈次元》裡就多信幾分，也別因此少信幾分。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "這些數字可信嗎？", "next": "verify" },
+              { "id": "r_2", "text": "知道了", "actionKey": "end-dialog" }
             ]
           },
           "verify": {
