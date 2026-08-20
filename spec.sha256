@@ -10,4 +10,15 @@
 # 「這確實是 2026-08-17 當天承諾的那一套」。
 #
 # 驗證方式（日後揭露時）：
-#   sha256( json.dumps(spec, sort_keys=True, separators=(',',':'), ensure_ascii=False) )
+#   sha256( json.dumps(spec, sort_keys=True, separators=(',',':'),
+#                      ensure_ascii=False).encode('utf-8') )
+#
+#   編碼必須是 UTF-8。設定裡含非 ASCII 字元，換成其他編碼（UTF-16、
+#   帶 BOM 的 UTF-8 等）會算出完全不同的雜湊，比對就會失敗。
+#
+#   把 spec-private.json 與本檔放在同一層，執行下面這行即可自行驗證
+#   （複製時記得去掉開頭的「# 」）：
+#
+# python -c "import json,hashlib;print(hashlib.sha256(json.dumps(json.load(open('spec-private.json',encoding='utf-8')),sort_keys=True,separators=(',',':'),ensure_ascii=False).encode('utf-8')).hexdigest())"
+#
+#   輸出應該等於本檔第一行。
