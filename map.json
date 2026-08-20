@@ -116,7 +116,7 @@
       "enabled": true,
       "collisionMode": "soft",
       "behavior": {
-        "mode": "random-walk",
+        "mode": "idle",
         "randomWalkRadius": 1,
         "walkSpeedTilesPerSecond": 2.0
       },
@@ -175,7 +175,7 @@
       "enabled": true,
       "collisionMode": "soft",
       "behavior": {
-        "mode": "random-walk",
+        "mode": "idle",
         "randomWalkRadius": 1,
         "walkSpeedTilesPerSecond": 1.6
       },
@@ -328,7 +328,7 @@
       "enabled": true,
       "collisionMode": "soft",
       "behavior": {
-        "mode": "random-walk",
+        "mode": "idle",
         "randomWalkRadius": 2,
         "walkSpeedTilesPerSecond": 2.2
       },
@@ -377,7 +377,7 @@
       "enabled": true,
       "collisionMode": "soft",
       "behavior": {
-        "mode": "random-walk",
+        "mode": "idle",
         "randomWalkRadius": 2,
         "walkSpeedTilesPerSecond": 2.8
       },
@@ -426,7 +426,7 @@
       "enabled": true,
       "collisionMode": "soft",
       "behavior": {
-        "mode": "random-walk",
+        "mode": "idle",
         "randomWalkRadius": 1,
         "walkSpeedTilesPerSecond": 1.8
       },
