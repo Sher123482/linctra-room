@@ -397,15 +397,15 @@
       "name": { "family": "ADA", "given": "腿" },
       "actorKey": "jk-girl",
       "packId": "basepack",
-      "x": 3,
+      "x": 4,
       "y": 5,
       "facing": "down",
       "enabled": true,
       "collisionMode": "soft",
       "behavior": {
-        "mode": "idle",
-        "randomWalkRadius": 2,
-        "walkSpeedTilesPerSecond": 2.2
+        "mode": "random-walk",
+        "randomWalkRadius": 3,
+        "walkSpeedTilesPerSecond": 4.5
       },
       "dialog": {
         "entry": "start",
@@ -446,15 +446,15 @@
       "name": { "family": "BTC", "given": "腿" },
       "actorKey": "villager-man-2",
       "packId": "basepack",
-      "x": 20,
+      "x": 19,
       "y": 5,
       "facing": "down",
       "enabled": true,
       "collisionMode": "soft",
       "behavior": {
-        "mode": "idle",
-        "randomWalkRadius": 2,
-        "walkSpeedTilesPerSecond": 2.8
+        "mode": "random-walk",
+        "randomWalkRadius": 3,
+        "walkSpeedTilesPerSecond": 4.5
       },
       "dialog": {
         "entry": "start",
