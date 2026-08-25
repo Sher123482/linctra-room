@@ -160,8 +160,10 @@
             "message": "假的。\n[wait]\n真的會死——這個房間沒有窗戶。房主試過三盆，全軍覆沒，然後就換塑膠的了。\n[wait]\n他說那是唯一一次他承認回測跟實盤不一致。",
             "emotion": "normal",
             "replies": [
-              { "id": "r_1", "text": "還有別的嗎？", "next": "chat" },
-              { "id": "r_2", "text": "了解", "actionKey": "end-dialog" }
+              { "id": "r_1", "text": "角落那個箱子", "next": "box" },
+              { "id": "r_2", "text": "那台播放器", "next": "tape" },
+              { "id": "r_3", "text": "魚缸", "next": "fish" },
+              { "id": "r_4", "text": "我看完了", "actionKey": "end-dialog" }
             ]
           },
           "box": {
@@ -169,8 +171,10 @@
             "message": "空的。\n[wait]\n你可以走過去打開，但我先講結果，省得你期待。\n[wait]\n旁邊地上那枚金幣是從裡面掉出來的。房主留著當紀念，提醒自己「看起來有東西」跟「真的有東西」是兩回事。",
             "emotion": "normal",
             "replies": [
-              { "id": "r_1", "text": "還有別的嗎？", "next": "chat" },
-              { "id": "r_2", "text": "了解", "actionKey": "end-dialog" }
+              { "id": "r_1", "text": "那些盆栽", "next": "plants" },
+              { "id": "r_2", "text": "那台播放器", "next": "tape" },
+              { "id": "r_3", "text": "魚缸", "next": "fish" },
+              { "id": "r_4", "text": "我看完了", "actionKey": "end-dialog" }
             ]
           },
           "tape": {
@@ -178,8 +182,10 @@
             "message": "那台可以點，是這房間唯一一個真的會動的東西。\n[wait]\n裡面有播放清單，你可以放來聽。房主說盯著資金曲線的時候需要一點背景音樂。\n[wait]\n音量在選單裡調。別吵到審計員，他脾氣不好。",
             "emotion": "happy",
             "replies": [
-              { "id": "r_1", "text": "還有別的嗎？", "next": "chat" },
-              { "id": "r_2", "text": "了解", "actionKey": "end-dialog" }
+              { "id": "r_1", "text": "那些盆栽", "next": "plants" },
+              { "id": "r_2", "text": "角落那個箱子", "next": "box" },
+              { "id": "r_3", "text": "魚缸", "next": "fish" },
+              { "id": "r_4", "text": "我看完了", "actionKey": "end-dialog" }
             ]
           },
           "fish": {
@@ -187,8 +193,10 @@
             "message": "魚是假的，跟盆栽一樣。\n[wait]\n但這個是故意的——房主說會動的東西讓人比較願意待著，而他希望你在這裡待久一點，久到把牆上的數字看完。\n[wait]\n他不太會拐彎抹角。",
             "emotion": "normal",
             "replies": [
-              { "id": "r_1", "text": "還有別的嗎？", "next": "chat" },
-              { "id": "r_2", "text": "了解", "actionKey": "end-dialog" }
+              { "id": "r_1", "text": "那些盆栽", "next": "plants" },
+              { "id": "r_2", "text": "角落那個箱子", "next": "box" },
+              { "id": "r_3", "text": "那台播放器", "next": "tape" },
+              { "id": "r_4", "text": "我看完了", "actionKey": "end-dialog" }
             ]
           },
           "attribution": {
