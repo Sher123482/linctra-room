@@ -102,7 +102,15 @@
 
     { "id": 801, "objectKey": "small-led-board", "packId": "biglazycat", "x": 3,  "y": 8, "placementState": "placed", "placementSurface": "floor", "custom": { "title": "1.55", "fontSize": "7" } },
     { "id": 802, "objectKey": "small-led-board", "packId": "biglazycat", "x": 11, "y": 8, "placementState": "placed", "placementSurface": "floor", "custom": { "title": "2.54", "fontSize": "7" } },
-    { "id": 803, "objectKey": "small-led-board", "packId": "biglazycat", "x": 20, "y": 8, "placementState": "placed", "placementSurface": "floor", "custom": { "title": "2.13", "fontSize": "7" } }
+    { "id": 803, "objectKey": "small-led-board", "packId": "biglazycat", "x": 20, "y": 8, "placementState": "placed", "placementSurface": "floor", "custom": { "title": "2.13", "fontSize": "7" } },
+    { "id": 901, "objectKey": "big-leaves-indoor-plant", "packId": "basepack", "x": 1, "y": 5, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 902, "objectKey": "big-leaves-indoor-plant", "packId": "basepack", "x": 1, "y": 8, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 903, "objectKey": "big-leaves-indoor-plant", "packId": "basepack", "x": 22, "y": 5, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 904, "objectKey": "big-leaves-indoor-plant", "packId": "basepack", "x": 22, "y": 8, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 905, "objectKey": "fish-tank", "packId": "basepack", "x": 6, "y": 7, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 906, "objectKey": "tape-player", "packId": "biglazycat", "x": 10, "y": 8, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 907, "objectKey": "simple-treasure-box", "packId": "basepack", "x": 14, "y": 8, "placementState": "placed", "placementSurface": "floor" },
+    { "id": 908, "objectKey": "gold-coin", "packId": "basepack", "x": 15, "y": 8, "placementState": "placed", "placementSurface": "floor" }
   ],
   "npcs": [
     {
@@ -131,7 +139,56 @@
               { "id": "r_1", "text": "這裡是做什麼的？", "next": "about" },
               { "id": "r_2", "text": "這些數字可信嗎？", "next": "verify" },
               { "id": "r_3", "text": "這間房跟平台什麼關係？", "next": "attribution" },
-              { "id": "r_4", "text": "隨便看看", "actionKey": "end-dialog" }
+              { "id": "r_4", "text": "這裡有什麼好玩的嗎？", "next": "chat" },
+              { "id": "r_5", "text": "隨便看看", "actionKey": "end-dialog" }
+            ]
+          },
+          "chat": {
+            "type": "dialog",
+            "message": "好玩的？這裡是交易室，不是遊樂園。\n[wait]\n不過你要是想閒晃，這幾樣東西可以看看。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "那些盆栽", "next": "plants" },
+              { "id": "r_2", "text": "角落那個箱子", "next": "box" },
+              { "id": "r_3", "text": "那台播放器", "next": "tape" },
+              { "id": "r_4", "text": "魚缸", "next": "fish" },
+              { "id": "r_5", "text": "我還是去看圖好了", "actionKey": "end-dialog" }
+            ]
+          },
+          "plants": {
+            "type": "dialog",
+            "message": "假的。\n[wait]\n真的會死——這個房間沒有窗戶。房主試過三盆，全軍覆沒，然後就換塑膠的了。\n[wait]\n他說那是唯一一次他承認回測跟實盤不一致。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "還有別的嗎？", "next": "chat" },
+              { "id": "r_2", "text": "了解", "actionKey": "end-dialog" }
+            ]
+          },
+          "box": {
+            "type": "dialog",
+            "message": "空的。\n[wait]\n你可以走過去打開，但我先講結果，省得你期待。\n[wait]\n旁邊地上那枚金幣是從裡面掉出來的。房主留著當紀念，提醒自己「看起來有東西」跟「真的有東西」是兩回事。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "還有別的嗎？", "next": "chat" },
+              { "id": "r_2", "text": "了解", "actionKey": "end-dialog" }
+            ]
+          },
+          "tape": {
+            "type": "dialog",
+            "message": "那台可以點，是這房間唯一一個真的會動的東西。\n[wait]\n裡面有播放清單，你可以放來聽。房主說盯著資金曲線的時候需要一點背景音樂。\n[wait]\n音量在選單裡調。別吵到審計員，他脾氣不好。",
+            "emotion": "happy",
+            "replies": [
+              { "id": "r_1", "text": "還有別的嗎？", "next": "chat" },
+              { "id": "r_2", "text": "了解", "actionKey": "end-dialog" }
+            ]
+          },
+          "fish": {
+            "type": "dialog",
+            "message": "魚是假的，跟盆栽一樣。\n[wait]\n但這個是故意的——房主說會動的東西讓人比較願意待著，而他希望你在這裡待久一點，久到把牆上的數字看完。\n[wait]\n他不太會拐彎抹角。",
+            "emotion": "normal",
+            "replies": [
+              { "id": "r_1", "text": "還有別的嗎？", "next": "chat" },
+              { "id": "r_2", "text": "了解", "actionKey": "end-dialog" }
             ]
           },
           "attribution": {
