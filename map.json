@@ -405,7 +405,7 @@
       "behavior": {
         "mode": "random-walk",
         "randomWalkRadius": 3,
-        "walkSpeedTilesPerSecond": 4.5
+        "walkSpeedTilesPerSecond": 3.0
       },
       "dialog": {
         "entry": "start",
@@ -454,7 +454,7 @@
       "behavior": {
         "mode": "random-walk",
         "randomWalkRadius": 3,
-        "walkSpeedTilesPerSecond": 4.5
+        "walkSpeedTilesPerSecond": 3.0
       },
       "dialog": {
         "entry": "start",
