@@ -108,7 +108,7 @@
     {
       "id": "npc-greeter",
       "name": { "family": "櫃檯", "given": "接待" },
-      "actorKey": "twintails-elf-girl",
+      "actorKey": "towns-woman",
       "packId": "basepack",
       "x": 12,
       "y": 9,
